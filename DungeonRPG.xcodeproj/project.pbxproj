@@ -14,6 +14,15 @@
 		33E1353821AF0F9C007C1FCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33E1353621AF0F9C007C1FCC /* LaunchScreen.storyboard */; };
 		33E1354321AF0F9C007C1FCC /* DungeonRPGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1354221AF0F9C007C1FCC /* DungeonRPGTests.swift */; };
 		33E1354E21AF0F9C007C1FCC /* DungeonRPGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1354D21AF0F9C007C1FCC /* DungeonRPGUITests.swift */; };
+		33E1357821AF119B007C1FCC /* heroes in Resources */ = {isa = PBXBuildFile; fileRef = 33E1357721AF119B007C1FCC /* heroes */; };
+		33E1357A21AF11CD007C1FCC /* items in Resources */ = {isa = PBXBuildFile; fileRef = 33E1357921AF11CD007C1FCC /* items */; };
+		33E1357C21AF11D6007C1FCC /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33E1357B21AF11D6007C1FCC /* logo.jpg */; };
+		33E1357E21AF11E2007C1FCC /* monsters in Resources */ = {isa = PBXBuildFile; fileRef = 33E1357D21AF11E2007C1FCC /* monsters */; };
+		33E1358021AF11F0007C1FCC /* stats in Resources */ = {isa = PBXBuildFile; fileRef = 33E1357F21AF11F0007C1FCC /* stats */; };
+		33E1358221AF12E8007C1FCC /* Heroe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1358121AF12E8007C1FCC /* Heroe.swift */; };
+		33E1358421AF1642007C1FCC /* Stuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1358321AF1642007C1FCC /* Stuff.swift */; };
+		33E1358621AF16E7007C1FCC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1358521AF16E7007C1FCC /* Item.swift */; };
+		33E1358821AF1B63007C1FCC /* Monstruo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1358721AF1B63007C1FCC /* Monstruo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +56,39 @@
 		33E1354921AF0F9C007C1FCC /* DungeonRPGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DungeonRPGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E1354D21AF0F9C007C1FCC /* DungeonRPGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonRPGUITests.swift; sourceTree = "<group>"; };
 		33E1354F21AF0F9C007C1FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33E1355E21AF1152007C1FCC /* dice9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice9.png; sourceTree = "<group>"; };
+		33E1355F21AF1152007C1FCC /* dice8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice8.png; sourceTree = "<group>"; };
+		33E1356021AF1152007C1FCC /* dice12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice12.png; sourceTree = "<group>"; };
+		33E1356121AF1152007C1FCC /* dice1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice1.png; sourceTree = "<group>"; };
+		33E1356221AF1152007C1FCC /* dice11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice11.png; sourceTree = "<group>"; };
+		33E1356321AF1152007C1FCC /* dice3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice3.png; sourceTree = "<group>"; };
+		33E1356421AF1152007C1FCC /* dice2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice2.png; sourceTree = "<group>"; };
+		33E1356521AF1152007C1FCC /* dice10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice10.png; sourceTree = "<group>"; };
+		33E1356621AF1152007C1FCC /* dice6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice6.png; sourceTree = "<group>"; };
+		33E1356721AF1152007C1FCC /* dice7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice7.png; sourceTree = "<group>"; };
+		33E1356821AF1152007C1FCC /* dice5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice5.png; sourceTree = "<group>"; };
+		33E1356921AF1152007C1FCC /* dice4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice4.png; sourceTree = "<group>"; };
+		33E1356B21AF115B007C1FCC /* dice4U.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice4U.png; sourceTree = "<group>"; };
+		33E1356C21AF115B007C1FCC /* dice8U.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice8U.png; sourceTree = "<group>"; };
+		33E1356D21AF115B007C1FCC /* dice9U.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice9U.png; sourceTree = "<group>"; };
+		33E1356E21AF115B007C1FCC /* dice5U.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice5U.png; sourceTree = "<group>"; };
+		33E1356F21AF115B007C1FCC /* dice2U.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice2U.png; sourceTree = "<group>"; };
+		33E1357021AF115B007C1FCC /* dice11U.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice11U.png; sourceTree = "<group>"; };
+		33E1357121AF115B007C1FCC /* dice10U.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice10U.png; sourceTree = "<group>"; };
+		33E1357221AF115B007C1FCC /* dice3U.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice3U.png; sourceTree = "<group>"; };
+		33E1357321AF115B007C1FCC /* dice1U.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice1U.png; sourceTree = "<group>"; };
+		33E1357421AF115B007C1FCC /* dice12U.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice12U.png; sourceTree = "<group>"; };
+		33E1357521AF115B007C1FCC /* dice6U.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice6U.png; sourceTree = "<group>"; };
+		33E1357621AF115B007C1FCC /* dice7U.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice7U.png; sourceTree = "<group>"; };
+		33E1357721AF119B007C1FCC /* heroes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = heroes; sourceTree = "<group>"; };
+		33E1357921AF11CD007C1FCC /* items */ = {isa = PBXFileReference; lastKnownFileType = folder; path = items; sourceTree = "<group>"; };
+		33E1357B21AF11D6007C1FCC /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
+		33E1357D21AF11E2007C1FCC /* monsters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = monsters; sourceTree = "<group>"; };
+		33E1357F21AF11F0007C1FCC /* stats */ = {isa = PBXFileReference; lastKnownFileType = folder; path = stats; sourceTree = "<group>"; };
+		33E1358121AF12E8007C1FCC /* Heroe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heroe.swift; sourceTree = "<group>"; };
+		33E1358321AF1642007C1FCC /* Stuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stuff.swift; sourceTree = "<group>"; };
+		33E1358521AF16E7007C1FCC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		33E1358721AF1B63007C1FCC /* Monstruo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monstruo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +143,19 @@
 				33E1352F21AF0F98007C1FCC /* ViewController.swift */,
 				33E1353121AF0F98007C1FCC /* Main.storyboard */,
 				33E1353421AF0F9C007C1FCC /* Assets.xcassets */,
+				33E1357F21AF11F0007C1FCC /* stats */,
+				33E1357D21AF11E2007C1FCC /* monsters */,
+				33E1357B21AF11D6007C1FCC /* logo.jpg */,
+				33E1357921AF11CD007C1FCC /* items */,
+				33E1357721AF119B007C1FCC /* heroes */,
+				33E1356A21AF115B007C1FCC /* diceUser */,
+				33E1355D21AF1152007C1FCC /* diceMonster */,
 				33E1353621AF0F9C007C1FCC /* LaunchScreen.storyboard */,
 				33E1353921AF0F9C007C1FCC /* Info.plist */,
+				33E1358121AF12E8007C1FCC /* Heroe.swift */,
+				33E1358321AF1642007C1FCC /* Stuff.swift */,
+				33E1358521AF16E7007C1FCC /* Item.swift */,
+				33E1358721AF1B63007C1FCC /* Monstruo.swift */,
 			);
 			path = DungeonRPG;
 			sourceTree = "<group>";
@@ -123,6 +176,44 @@
 				33E1354F21AF0F9C007C1FCC /* Info.plist */,
 			);
 			path = DungeonRPGUITests;
+			sourceTree = "<group>";
+		};
+		33E1355D21AF1152007C1FCC /* diceMonster */ = {
+			isa = PBXGroup;
+			children = (
+				33E1355E21AF1152007C1FCC /* dice9.png */,
+				33E1355F21AF1152007C1FCC /* dice8.png */,
+				33E1356021AF1152007C1FCC /* dice12.png */,
+				33E1356121AF1152007C1FCC /* dice1.png */,
+				33E1356221AF1152007C1FCC /* dice11.png */,
+				33E1356321AF1152007C1FCC /* dice3.png */,
+				33E1356421AF1152007C1FCC /* dice2.png */,
+				33E1356521AF1152007C1FCC /* dice10.png */,
+				33E1356621AF1152007C1FCC /* dice6.png */,
+				33E1356721AF1152007C1FCC /* dice7.png */,
+				33E1356821AF1152007C1FCC /* dice5.png */,
+				33E1356921AF1152007C1FCC /* dice4.png */,
+			);
+			path = diceMonster;
+			sourceTree = "<group>";
+		};
+		33E1356A21AF115B007C1FCC /* diceUser */ = {
+			isa = PBXGroup;
+			children = (
+				33E1356B21AF115B007C1FCC /* dice4U.png */,
+				33E1356C21AF115B007C1FCC /* dice8U.png */,
+				33E1356D21AF115B007C1FCC /* dice9U.png */,
+				33E1356E21AF115B007C1FCC /* dice5U.png */,
+				33E1356F21AF115B007C1FCC /* dice2U.png */,
+				33E1357021AF115B007C1FCC /* dice11U.png */,
+				33E1357121AF115B007C1FCC /* dice10U.png */,
+				33E1357221AF115B007C1FCC /* dice3U.png */,
+				33E1357321AF115B007C1FCC /* dice1U.png */,
+				33E1357421AF115B007C1FCC /* dice12U.png */,
+				33E1357521AF115B007C1FCC /* dice6U.png */,
+				33E1357621AF115B007C1FCC /* dice7U.png */,
+			);
+			path = diceUser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,8 +320,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33E1357A21AF11CD007C1FCC /* items in Resources */,
+				33E1357821AF119B007C1FCC /* heroes in Resources */,
 				33E1353821AF0F9C007C1FCC /* LaunchScreen.storyboard in Resources */,
 				33E1353521AF0F9C007C1FCC /* Assets.xcassets in Resources */,
+				33E1358021AF11F0007C1FCC /* stats in Resources */,
+				33E1357C21AF11D6007C1FCC /* logo.jpg in Resources */,
+				33E1357E21AF11E2007C1FCC /* monsters in Resources */,
 				33E1353321AF0F98007C1FCC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +352,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33E1358821AF1B63007C1FCC /* Monstruo.swift in Sources */,
+				33E1358621AF16E7007C1FCC /* Item.swift in Sources */,
 				33E1353021AF0F98007C1FCC /* ViewController.swift in Sources */,
 				33E1352E21AF0F98007C1FCC /* AppDelegate.swift in Sources */,
+				33E1358421AF1642007C1FCC /* Stuff.swift in Sources */,
+				33E1358221AF12E8007C1FCC /* Heroe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
