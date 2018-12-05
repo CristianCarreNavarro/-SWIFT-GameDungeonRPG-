@@ -13,7 +13,7 @@ public class Heroe{
     private var nivel: Int
     private var experiencia: Int
     private var monedas: Int
-   // private var stuff: Stuff
+    private var stuff = Stuff()
     
     init(nombre: String,nivel: Int, experiencia: Int, monedas: Int){
         self.nombre = nombre

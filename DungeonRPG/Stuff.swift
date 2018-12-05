@@ -10,6 +10,13 @@ import Foundation
 
 public class Stuff{
     
+      //Diccionario de items
+      //Objeto stuff que va a contener Items
+      //la clave seran los Items
+    
+    
+    
+    /**
     private var arma: Item
     private var escudo: Item
     private var casco: Item
@@ -24,6 +31,7 @@ public class Stuff{
         self.botas=botas
         self.armadura=armadura
     }
+   
     func getArma()->Item{
         return arma
     }
@@ -56,5 +64,5 @@ public class Stuff{
     func setArmadura(valor: Item){
         self.armadura=valor
     }
-    
+    **/
 }

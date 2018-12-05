@@ -7,19 +7,23 @@
 //
 
 import Foundation
+import UIKit
 
 public class Item{
     private var ataque: Int
     private var defensa: Int
     private var magia: Int
     private var suerte: Int
-
+    private var imagen: UIImage = UIImage()
+    private var tipo : String
     
-    init(ataque: Int,defensa: Int, magia:Int, suerte:Int) {
+    init(ataque: Int,defensa: Int, magia:Int, suerte:Int, imagen:UIImage,tipo:String) {
         self.ataque=ataque
         self.defensa=defensa
         self.magia=magia
         self.suerte=suerte
+        self.imagen=imagen
+        self.tipo=tipo
     }
     
     func getAtaque()->Int{
