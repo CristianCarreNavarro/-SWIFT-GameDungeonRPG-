@@ -113,7 +113,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iww-lK-pCP">
-                                <rect key="frame" x="265" y="185" width="6" height="11"/>
+                                <rect key="frame" x="265" y="185" width="11" height="11"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -322,6 +322,20 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="ataqueAngar" destination="JVU-Kv-ceE" id="HjV-Ct-TsP"/>
+                        <outlet property="ataqueFelween" destination="KQc-YO-QOz" id="OjM-6Z-wX7"/>
+                        <outlet property="ataqueThojen" destination="6vI-D7-BQp" id="6b1-M3-LdG"/>
+                        <outlet property="defensaAngar" destination="btt-HE-Tcl" id="W2g-qR-IGo"/>
+                        <outlet property="defensaFelween" destination="beV-gq-Sfa" id="Rtx-cZ-PZN"/>
+                        <outlet property="defensaThojen" destination="oQ3-Kq-R0V" id="AfT-D7-hQj"/>
+                        <outlet property="luckyAngar" destination="bcz-QU-lzE" id="OGO-Ee-xUn"/>
+                        <outlet property="luckyFelween" destination="eXY-Ab-huw" id="mcC-Y3-fAy"/>
+                        <outlet property="luckyThojen" destination="gEi-Hc-2Wn" id="OWG-w1-e2E"/>
+                        <outlet property="magiaAngar" destination="iww-lK-pCP" id="dFP-8W-yB7"/>
+                        <outlet property="magiaFelween" destination="RQg-Ly-b7l" id="Lyr-Na-2jl"/>
+                        <outlet property="magiaThojen" destination="UEj-b3-bl0" id="VRz-uG-K0M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
