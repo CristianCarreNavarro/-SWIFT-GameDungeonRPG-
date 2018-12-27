@@ -23,6 +23,7 @@
 		33E1358421AF1642007C1FCC /* Stuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1358321AF1642007C1FCC /* Stuff.swift */; };
 		33E1358621AF16E7007C1FCC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1358521AF16E7007C1FCC /* Item.swift */; };
 		33E1358821AF1B63007C1FCC /* Monstruo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1358721AF1B63007C1FCC /* Monstruo.swift */; };
+		FA0C8BA021D573410095BD80 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C8B9F21D573410095BD80 /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		33E1358321AF1642007C1FCC /* Stuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stuff.swift; sourceTree = "<group>"; };
 		33E1358521AF16E7007C1FCC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		33E1358721AF1B63007C1FCC /* Monstruo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monstruo.swift; sourceTree = "<group>"; };
+		FA0C8B9F21D573410095BD80 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				33E1352D21AF0F98007C1FCC /* AppDelegate.swift */,
 				33E1352F21AF0F98007C1FCC /* ViewController.swift */,
+				FA0C8B9F21D573410095BD80 /* ViewController2.swift */,
 				33E1353121AF0F98007C1FCC /* Main.storyboard */,
 				33E1353421AF0F9C007C1FCC /* Assets.xcassets */,
 				33E1357F21AF11F0007C1FCC /* stats */,
@@ -284,6 +287,7 @@
 				TargetAttributes = {
 					33E1352921AF0F98007C1FCC = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					33E1353D21AF0F9C007C1FCC = {
 						CreatedOnToolsVersion = 10.1;
@@ -352,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0C8BA021D573410095BD80 /* ViewController2.swift in Sources */,
 				33E1358821AF1B63007C1FCC /* Monstruo.swift in Sources */,
 				33E1358621AF16E7007C1FCC /* Item.swift in Sources */,
 				33E1353021AF0F98007C1FCC /* ViewController.swift in Sources */,
@@ -532,7 +537,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 346MLAG495;
 				INFOPLIST_FILE = DungeonRPG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -540,6 +547,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-3.DungeonRPG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -549,7 +557,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 346MLAG495;
 				INFOPLIST_FILE = DungeonRPG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

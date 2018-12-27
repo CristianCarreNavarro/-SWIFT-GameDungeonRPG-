@@ -18,13 +18,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var defensaAngar: UILabel!
     
-    @IBOutlet weak var magiaFelween: UILabel!
-    
-    @IBOutlet weak var luckyFelween: UILabel!
-    
-    @IBOutlet weak var ataqueFelween: UILabel!
-    
-    @IBOutlet weak var defensaFelween: UILabel!
+
     
     @IBOutlet weak var magiaThojen: UILabel!
    
@@ -34,9 +28,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var defensaThojen: UILabel!
     
+   // @IBOutlet weak var btonFight: UIButton!
+  
+    @IBOutlet weak var btonHeroe1: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     //   btonFight.layer.cornerRadius = 10
        
     
     }
