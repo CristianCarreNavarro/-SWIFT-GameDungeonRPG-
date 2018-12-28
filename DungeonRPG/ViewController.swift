@@ -10,15 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var magiaAngar: UILabel!
+    @IBOutlet weak var magiaAgro: UILabel!
     
-    @IBOutlet weak var luckyAngar: UILabel!
+    @IBOutlet weak var luckyAgro: UILabel!
     
-    @IBOutlet weak var ataqueAngar: UILabel!
+    @IBOutlet weak var ataqueAgro: UILabel!
     
-    @IBOutlet weak var defensaAngar: UILabel!
+    @IBOutlet weak var defensaAgro: UILabel!
     
 
+    @IBOutlet weak var ataqueArcher: UILabel!
+    
+    @IBOutlet weak var magiaArcher: UILabel!
+    
+    @IBOutlet weak var defensaArcher: UILabel!
+    
+    @IBOutlet weak var luckyArcher: UILabel!
+    
     
     @IBOutlet weak var magiaThojen: UILabel!
    
@@ -30,15 +38,18 @@ class ViewController: UIViewController {
     
    // @IBOutlet weak var btonFight: UIButton!
   
-    @IBOutlet weak var btonHeroe1: UIButton!
+
+    
+    let espadaFuego = Item(ataque: 30, defensa: 24, magia: 06, suerte: 2, imagen: UIImage(named: "sword2.png")!, tipo: "espada")
     
     override func viewDidLoad() {
         super.viewDidLoad()
      //   btonFight.layer.cornerRadius = 10
        
-    
+        ataqueAgro.text = String (espadaFuego.getAtaque())
     }
 
 
+    
 }
 
