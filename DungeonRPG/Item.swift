@@ -38,7 +38,12 @@ public class Item{
     func getSuerte()->Int{
         return suerte
     }
-    
+    func getImagen()->UIImage{
+        return imagen
+    }
+    func setImagen(valor:UIImage){
+        self.imagen = valor
+    }
     func setAtaque(valor:Int){
         self.ataque = valor
     }

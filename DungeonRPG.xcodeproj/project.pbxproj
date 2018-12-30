@@ -117,6 +117,9 @@
 		FA25BBD821D65A29004D0584 /* magic.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25BB7621D65A28004D0584 /* magic.png */; };
 		FA25BBD921D65A29004D0584 /* preset_backpack.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25BB7721D65A28004D0584 /* preset_backpack.png */; };
 		FA25BBDA21D65A29004D0584 /* heart_middle.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25BB7821D65A28004D0584 /* heart_middle.png */; };
+		FA2FBEFB21D93B5A006FA84E /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FBEFA21D93B5A006FA84E /* ViewController3.swift */; };
+		FA2FBEFD21D9882C006FA84E /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FBEFC21D9882C006FA84E /* ViewController4.swift */; };
+		FA2FBEFF21D98A17006FA84E /* ViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FBEFE21D98A17006FA84E /* ViewController5.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -277,6 +280,9 @@
 		FA25BB7621D65A28004D0584 /* magic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magic.png; sourceTree = "<group>"; };
 		FA25BB7721D65A28004D0584 /* preset_backpack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preset_backpack.png; sourceTree = "<group>"; };
 		FA25BB7821D65A28004D0584 /* heart_middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_middle.png; sourceTree = "<group>"; };
+		FA2FBEFA21D93B5A006FA84E /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
+		FA2FBEFC21D9882C006FA84E /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
+		FA2FBEFE21D98A17006FA84E /* ViewController5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController5.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,7 +335,10 @@
 			children = (
 				33E1352D21AF0F98007C1FCC /* AppDelegate.swift */,
 				33E1352F21AF0F98007C1FCC /* ViewController.swift */,
+				FA2FBEFA21D93B5A006FA84E /* ViewController3.swift */,
 				FA0C8B9F21D573410095BD80 /* ViewController2.swift */,
+				FA2FBEFE21D98A17006FA84E /* ViewController5.swift */,
+				FA2FBEFC21D9882C006FA84E /* ViewController4.swift */,
 				33E1353121AF0F98007C1FCC /* Main.storyboard */,
 				33E1353421AF0F9C007C1FCC /* Assets.xcassets */,
 				FA25BB1721D65A26004D0584 /* dice */,
@@ -791,7 +800,10 @@
 			files = (
 				FA0C8BA021D573410095BD80 /* ViewController2.swift in Sources */,
 				33E1358821AF1B63007C1FCC /* Monstruo.swift in Sources */,
+				FA2FBEFB21D93B5A006FA84E /* ViewController3.swift in Sources */,
 				33E1358621AF16E7007C1FCC /* Item.swift in Sources */,
+				FA2FBEFF21D98A17006FA84E /* ViewController5.swift in Sources */,
+				FA2FBEFD21D9882C006FA84E /* ViewController4.swift in Sources */,
 				33E1353021AF0F98007C1FCC /* ViewController.swift in Sources */,
 				33E1352E21AF0F98007C1FCC /* AppDelegate.swift in Sources */,
 				33E1358421AF1642007C1FCC /* Stuff.swift in Sources */,

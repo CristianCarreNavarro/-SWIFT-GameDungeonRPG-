@@ -48,7 +48,7 @@ public class Stuff{
     func getCasco()->Item{
         return casco
     }
-    func getbotas()->Item{
+    func getBotas()->Item{
         return botas
     }
     func getArmadura()->Item{

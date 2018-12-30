@@ -47,5 +47,25 @@ public class Heroe{
         }
     
     
+    func  conseguirAtaque(stuff : Stuff)-> Int{
+        var ataque : Int  = 0
+        ataque = stuff.getArma().getAtaque()+stuff.getBotas().getAtaque()+stuff.getCasco().getAtaque()+stuff.getAnillo().getAtaque()+stuff.getEscudo().getAtaque()+stuff.getArmadura().getAtaque()
+        return ataque
+    }
+    func  conseguirMagia(stuff : Stuff)-> Int{
+        var magia : Int  = 0
+        magia = stuff.getArma().getMagia()+stuff.getBotas().getMagia()+stuff.getCasco().getMagia()+stuff.getAnillo().getMagia()+stuff.getEscudo().getMagia()+stuff.getArmadura().getMagia()
+        return magia
+    }
+    func  conseguirSuerte(stuff : Stuff)-> Int{
+        var suerte : Int  = 0
+        suerte = stuff.getArma().getSuerte()+stuff.getBotas().getSuerte()+stuff.getCasco().getSuerte()+stuff.getAnillo().getSuerte()+stuff.getEscudo().getSuerte()+stuff.getArmadura().getSuerte()
+        return suerte
+    }
+    func  conseguirDefensa(stuff : Stuff)-> Int{
+        var defensa : Int  = 0
+        defensa = stuff.getArma().getDefensa()+stuff.getBotas().getDefensa()+stuff.getCasco().getDefensa()+stuff.getAnillo().getDefensa()+stuff.getEscudo().getDefensa()+stuff.getArmadura().getDefensa()
+        return defensa
+    }
 }
 

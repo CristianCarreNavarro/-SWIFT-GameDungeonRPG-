@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
  class ViewController: UIViewController {
 
     @IBOutlet weak var magiaAgro: UILabel!
@@ -42,14 +43,29 @@ import UIKit
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
      //   btonFight.layer.cornerRadius = 10
         
-       
+        let stuff1 = heroe1.getStuff()
+        ataqueAgro.text = String (heroe1.conseguirAtaque(stuff : stuff1))
+        magiaAgro.text = String (heroe1.conseguirMagia(stuff : stuff1))
+        defensaAgro.text = String (heroe1.conseguirDefensa(stuff : stuff1))
+        luckyAgro.text = String (heroe1.conseguirSuerte(stuff : stuff1))
         
-        ataqueAgro.text = String (conseguirAtaque(stuff: heroe1.getStuff()))
-        magiaAgro.text = String (conseguirMagia(stuff: heroe1.getStuff()))
-        defensaAgro.text = String (conseguirDefensa(stuff: heroe1.getStuff()))
-        luckyAgro.text = String (conseguirSuerte(stuff: heroe1.getStuff()))
+        let stuff2 = heroe2.getStuff()
+        ataqueArcher.text = String (heroe2.conseguirAtaque(stuff : stuff2))
+        magiaArcher.text = String (heroe2.conseguirMagia(stuff : stuff2))
+        defensaArcher.text = String (heroe2.conseguirDefensa(stuff : stuff2))
+        luckyArcher.text = String (heroe2.conseguirSuerte(stuff : stuff2))
+        
+    
+        let stuff3 = heroe3.getStuff()
+        ataqueThojen.text = String (heroe3.conseguirAtaque(stuff : stuff3))
+        magiaThojen.text = String (heroe3.conseguirMagia(stuff : stuff3))
+        defensaThojen.text = String (heroe3.conseguirDefensa(stuff : stuff3))
+        luckyThojen.text = String (heroe3.conseguirSuerte(stuff : stuff3))
+      
+     
     }
 
 
@@ -107,25 +123,18 @@ import UIKit
     
     //FUNCIONES
     
-    func  conseguirAtaque(stuff : Stuff)-> Int{
-        var ataque : Int  = 0
-        ataque = stuff.getArma().getAtaque()+stuff.getbotas().getAtaque()+stuff.getCasco().getAtaque()+stuff.getAnillo().getAtaque()+stuff.getEscudo().getAtaque()+stuff.getArmadura().getAtaque()
-        return ataque
-    }
-    func  conseguirMagia(stuff : Stuff)-> Int{
-        var magia : Int  = 0
-        magia = stuff.getArma().getMagia()+stuff.getbotas().getMagia()+stuff.getCasco().getMagia()+stuff.getAnillo().getMagia()+stuff.getEscudo().getMagia()+stuff.getArmadura().getMagia()
-        return magia
-    }
-    func  conseguirSuerte(stuff : Stuff)-> Int{
-        var suerte : Int  = 0
-         suerte = stuff.getArma().getSuerte()+stuff.getbotas().getSuerte()+stuff.getCasco().getSuerte()+stuff.getAnillo().getSuerte()+stuff.getEscudo().getSuerte()+stuff.getArmadura().getSuerte()
-        return suerte
-    }
-    func  conseguirDefensa(stuff : Stuff)-> Int{
-        var defensa : Int  = 0
-        defensa = stuff.getArma().getDefensa()+stuff.getbotas().getDefensa()+stuff.getCasco().getDefensa()+stuff.getAnillo().getDefensa()+stuff.getEscudo().getDefensa()+stuff.getArmadura().getDefensa()
-        return defensa
+  
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let segundoView = segue.destination as! ViewController2
+           if (segue.identifier == "secue1" ) {
+             segundoView.heroeElegido = heroe1
+           }else if(segue.identifier == "secue3" ) {
+            segundoView.heroeElegido = heroe2
+           }else if(segue.identifier == "secue2" ) {
+            segundoView.heroeElegido = heroe3
+        }
     }
 }
 
