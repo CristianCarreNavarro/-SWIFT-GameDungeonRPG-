@@ -16,22 +16,29 @@ public class Stuff{
     
     
     
-    /**
+
     private var arma: Item
     private var escudo: Item
     private var casco: Item
     private var botas: Item
     private var armadura: Item
+    private var anillo : Item
     
     
-    init(arma: Item,escudo: Item, casco: Item, botas: Item,armadura: Item){
+    init(arma: Item,escudo: Item, casco: Item, botas: Item,armadura: Item, anillo : Item){
         self.arma=arma
         self.escudo=escudo
         self.casco=casco
         self.botas=botas
         self.armadura=armadura
+        self.anillo=anillo
     }
-   
+    func getAnillo()->Item{
+        return anillo
+    }
+    func setAnillo(valor: Item){
+        self.anillo=valor
+    }
     func getArma()->Item{
         return arma
     }
@@ -64,5 +71,5 @@ public class Stuff{
     func setArmadura(valor: Item){
         self.armadura=valor
     }
-    **/
+ 
 }
