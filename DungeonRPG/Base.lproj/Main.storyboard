@@ -117,7 +117,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stI-by-oKr">
-                                <rect key="frame" x="24" y="368" width="320" height="92"/>
+                                <rect key="frame" x="24" y="366" width="320" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pickerView>
@@ -584,7 +584,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1l-bq-3B2">
-                                <rect key="frame" x="78" y="482" width="229" height="99"/>
+                                <rect key="frame" x="74" y="482" width="229" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="6Ki-u3-bz3" kind="show" id="d8m-co-Tpm"/>
@@ -594,13 +594,6 @@
                                 <rect key="frame" x="82" y="161" width="49" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIL-ec-Viw">
-                                <rect key="frame" x="72" y="37" width="229" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="6Ki-u3-bz3" kind="show" id="ghc-1c-QJy"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKm-99-cpk">
                                 <rect key="frame" x="192" y="183" width="23" height="11"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -609,10 +602,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wms-K8-kkP">
-                                <rect key="frame" x="91" y="264" width="229" height="99"/>
+                                <rect key="frame" x="74" y="313" width="229" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="6Ki-u3-bz3" kind="show" id="Pik-8g-Uy4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIL-ec-Viw">
+                                <rect key="frame" x="72" y="144" width="229" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="6Ki-u3-bz3" kind="show" id="ghc-1c-QJy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -621,6 +621,17 @@
                     </view>
                     <connections>
                         <outlet property="ataqueAgro" destination="LKm-99-cpk" id="h7y-8U-aoH"/>
+                        <outlet property="ataqueArcher" destination="4yw-iV-6Mc" id="Grz-gP-8W8"/>
+                        <outlet property="ataqueThojen" destination="fSQ-Xe-Psf" id="6ej-Tl-j2S"/>
+                        <outlet property="defensaAgro" destination="btt-HE-Tcl" id="Rhc-bs-Ttd"/>
+                        <outlet property="defensaArcher" destination="cfl-gB-vO1" id="sv9-FV-Q9O"/>
+                        <outlet property="defensaThojen" destination="r2Z-oU-O6v" id="xyh-kk-7Oz"/>
+                        <outlet property="luckyAgro" destination="bcz-QU-lzE" id="Dqi-Bw-3Ah"/>
+                        <outlet property="luckyArcher" destination="N7W-zc-lPl" id="Qbt-fL-J9r"/>
+                        <outlet property="luckyThojen" destination="AbH-QW-cCG" id="vST-An-iYs"/>
+                        <outlet property="magiaAgro" destination="iww-lK-pCP" id="jFt-Hb-no1"/>
+                        <outlet property="magiaArcher" destination="oNz-Lg-fQ5" id="T8Z-gy-tUO"/>
+                        <outlet property="magiaThojen" destination="zDc-hW-xdq" id="kRt-Va-RwS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivN-a3-YCX" userLabel="First Responder" sceneMemberID="firstResponder"/>

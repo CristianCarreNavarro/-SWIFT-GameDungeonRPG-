@@ -45,5 +45,7 @@ public class Heroe{
         func setMonedas(valor: Int){
         self.monedas=valor
         }
+    
+    
 }
 
