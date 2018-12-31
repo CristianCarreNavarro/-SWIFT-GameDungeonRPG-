@@ -212,6 +212,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GDq-Bp-agP"/>
                     </view>
+                    <connections>
+                        <outlet property="pickerView" destination="Erf-X4-nEk" id="SOJ-ji-2jF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jd-aR-fXO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -850,7 +853,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXU-Lh-gxu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1639" y="15"/>
+            <point key="canvasLocation" x="1637.5999999999999" y="14.842578710644679"/>
         </scene>
     </scenes>
     <resources>
@@ -871,6 +874,6 @@
         <image name="xp.png" width="56" height="57"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9KB-Z0-dcQ"/>
+        <segue reference="XcY-sN-jnG"/>
     </inferredMetricsTieBreakers>
 </document>

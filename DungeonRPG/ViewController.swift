@@ -36,15 +36,17 @@ import UIKit
     
     @IBOutlet weak var defensaThojen: UILabel!
     
-   // @IBOutlet weak var btonFight: UIButton!
-  
+    
+    static var  arrayItems :Array<Any> = []
+    
 
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     //   btonFight.layer.cornerRadius = 10
+        ViewController.arrayItems = [espadaFuego,arco,cetroCristal,escudoRonyoso,ViewController.escudoBarbaSanta,escudoTipico,lataFrijoles,sombreroMago,sombreroBizantino,sombreroVikingo,ViewController.botasCuero,botasHierro,armaduraDragon,capaSucia,capaLimpia,armaduraExtranyoAgujero,anilloBoda,anilloPedrusco,anilloRojo]
+
+     
         
         let stuff1 = heroe1.getStuff()
         ataqueAgro.text = String (heroe1.conseguirAtaque(stuff : stuff1))
@@ -70,10 +72,7 @@ import UIKit
 
 
  
-    
-    
-    
-    
+
    
     //HEROES
     lazy var heroe1 = Heroe(nombre:"Agro", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff1 )
@@ -89,7 +88,7 @@ import UIKit
     
    //ESCUDOS
     let escudoRonyoso = Item(ataque: 5, defensa: 34, magia: 26, suerte: 1, imagen: UIImage(named: "shield4.png")!, tipo: "escudo")
-    let escudoBarbaSanta = Item(ataque: 7, defensa: 42, magia: 0, suerte: 11, imagen: UIImage(named: "shield2.png")!, tipo: "escudo")
+    static var escudoBarbaSanta = Item(ataque: 7, defensa: 42, magia: 0, suerte: 11, imagen: UIImage(named: "shield2.png")!, tipo: "escudo")
     let escudoTipico = Item(ataque: 2, defensa: 55, magia: 7, suerte: 8, imagen: UIImage(named: "shield.png")!, tipo: "escudo")
     
     //CASCOS
@@ -99,7 +98,7 @@ import UIKit
     let sombreroVikingo = Item(ataque: 20, defensa: 12, magia: 3, suerte: 15, imagen: UIImage(named: "helmet4.png")!, tipo: "casco")
     
     //BOTAS
-    let botasCuero = Item(ataque: 3, defensa: 4, magia: 01, suerte: 2, imagen: UIImage(named: "boots.png")!, tipo: "botas")
+    static var botasCuero = Item(ataque: 3, defensa: 4, magia: 01, suerte: 2, imagen: UIImage(named: "boots.png")!, tipo: "botas")
     let botasHierro = Item(ataque: 13, defensa: 14, magia: 0, suerte: 0, imagen: UIImage(named: "boots2.png")!, tipo: "botas")
    
    //ARMADURAS
@@ -109,16 +108,19 @@ import UIKit
     let armaduraExtranyoAgujero = Item(ataque: 15, defensa: 68, magia: 6, suerte: 20, imagen: UIImage(named: "armour.png")!, tipo: "armadura")
     
     //ANILLOS
-    let anilloBoda = Item(ataque: 3, defensa: 4, magia: 56, suerte: 0, imagen: UIImage(named: "ring2.png")!, tipo: "anillo")
+    let anilloBoda = Item(ataque: 3, defensa: 4, magia: 56, suerte: 0, imagen: UIImage(named: "necklace.png")!, tipo: "anillo")
     let anilloPedrusco = Item(ataque: 5, defensa: 0, magia: 42, suerte: 10, imagen: UIImage(named: "ring.png")!, tipo: "anillo")
-     let anilloRojo = Item(ataque: 7, defensa: 1, magia: 25, suerte: 5, imagen: UIImage(named: "ring2.png")!, tipo: "anillo")
+    let anilloRojo = Item(ataque: 7, defensa: 1, magia: 25, suerte: 5, imagen: UIImage(named: "ring2.png")!, tipo: "anillo")
+    
+ 
+    
     
     //STUFFS
     lazy var stuff1 = Stuff(arma: espadaFuego, escudo: escudoRonyoso, casco: sombreroVikingo, botas: botasHierro, armadura: armaduraDragon, anillo: anilloBoda);
     
-    lazy var stuff2 = Stuff(arma: arco, escudo: escudoBarbaSanta, casco: lataFrijoles, botas: botasCuero, armadura: capaSucia, anillo: anilloPedrusco);
+    lazy var stuff2 = Stuff(arma: arco, escudo: ViewController.escudoBarbaSanta, casco: lataFrijoles, botas: ViewController.botasCuero, armadura: capaSucia, anillo: anilloPedrusco);
     
-    lazy var stuff3 = Stuff(arma: cetroCristal, escudo: escudoTipico, casco: sombreroMago, botas: botasCuero, armadura: capaLimpia, anillo: anilloRojo);
+    lazy var stuff3 = Stuff(arma: cetroCristal, escudo: escudoTipico, casco: sombreroMago, botas: ViewController.botasCuero, armadura: capaLimpia, anillo: anilloRojo);
     
     
     //FUNCIONES

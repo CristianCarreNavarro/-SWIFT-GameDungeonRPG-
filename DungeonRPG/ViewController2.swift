@@ -24,7 +24,7 @@ class ViewController2: UIViewController {
         if (segue.identifier == "secueShop" ) {
             let quintaView = segue.destination as! ViewController5
             quintaView.heroeCompras = heroeElegido
-        }
+        } 
     }
   
     
