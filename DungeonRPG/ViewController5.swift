@@ -43,8 +43,15 @@ class ViewController5: UIViewController,UIPickerViewDelegate,UIPickerViewDataSou
     //func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
 
    // }
+    
+    
+    
+    //FALLO DE PICKERVIEW VISTA
+    
+    
+    
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 160
+        return 90
     }
 let todoJunto = UIView()
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
@@ -53,14 +60,14 @@ let todoJunto = UIView()
         
         
         var myImageView = UIImageView()
+        let label = UILabel(frame: CGRect(x: 100, y: 0, width: 200, height: 100 ))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height:100))
+        
         switch row {
         case 0:
-            
-           
-            let label = UILabel(frame: CGRect(x: 60, y: 0, width: 80, height: 50))
-            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height:50))
-           
+
             imageView.image = UIImage(named: "boots.png")
+            label.backgroundColor = UIColor.brown
             label.text = "ataque:100 \n defensa :30 \n magia:45 \n suerte:23 \n coste: 100"
             
             todoJunto.addSubview(label)
@@ -69,7 +76,15 @@ let todoJunto = UIView()
             return todoJunto
           
         case 1:
-            myImageView = UIImageView(image: UIImage(named:"boots2.png"))
+           
+            imageView.image = UIImage(named: "helmet3.png")
+            label.backgroundColor = UIColor.brown
+            label.text = "ataque:100 \n defensa :30 \n magia:45 \n suerte:23 \n coste: 100"
+            
+            todoJunto.addSubview(label)
+            todoJunto.addSubview(imageView)
+            
+            return todoJunto
         case 2:
             myImageView = UIImageView(image: UIImage(named:"sword2.png"))
         case 3:
