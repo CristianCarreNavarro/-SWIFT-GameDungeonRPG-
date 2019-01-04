@@ -17,8 +17,9 @@ public class Monstruo{
     private var defensaMonstruo:Int
     private var premioMonstruo:Int
     private var experienciaMonstruo:Int
+    private var imagen: String
     
-    init(nombreMonstruo:String, nivelMonstruo:Int, vidaMonstruo:Int, ataqueMonstruo:Int, defensaMonstruo:Int, premioMonstruo:Int, experienciaMonstruo:Int){
+    init(nombreMonstruo:String, nivelMonstruo:Int, vidaMonstruo:Int, ataqueMonstruo:Int, defensaMonstruo:Int, premioMonstruo:Int, experienciaMonstruo:Int,imagen:String){
         
         self.nombreMonstruo = nombreMonstruo
         self.nivelMonstruo = nivelMonstruo
@@ -27,9 +28,12 @@ public class Monstruo{
         self.defensaMonstruo = defensaMonstruo
         self.premioMonstruo = premioMonstruo
         self.experienciaMonstruo=experienciaMonstruo
+        self.imagen=imagen
         
     }
-    
+    func getImagen()->String{
+        return imagen
+    }
     func getNombreMonstruo()->String{
         return nombreMonstruo
     }
