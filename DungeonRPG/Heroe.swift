@@ -14,19 +14,23 @@ public class Heroe{
     private var experiencia: Int
     private var monedas: Int
     private var stuff: Stuff
+    private var imagen : String
     
-    init(nombre: String,nivel: Int, experiencia: Int, monedas: Int,stuff : Stuff){
+    init(nombre: String,nivel: Int, experiencia: Int, monedas: Int,stuff : Stuff,imagen : String){
         self.nombre = nombre
         self.nivel = nivel
         self.experiencia = experiencia
         self.monedas = monedas
         self.stuff = stuff
+        self.imagen = imagen
         
     }
-    
+    func getImagen()->String{
+        return imagen
+    }
         func getStuff()->Stuff{
         return stuff
-    }
+        }
         func getNombre()->String{
             return nombre
         }

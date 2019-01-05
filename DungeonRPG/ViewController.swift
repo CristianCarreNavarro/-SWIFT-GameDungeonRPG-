@@ -75,9 +75,9 @@ import UIKit
 
    
     //HEROES
-    lazy var heroe1 = Heroe(nombre:"Agro", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff1 )
-    lazy var heroe2 = Heroe(nombre:"Archer", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff2 )
-    lazy var heroe3 = Heroe(nombre:"Thojen", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff3 )
+    lazy var heroe1 = Heroe(nombre:"Agro", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff1, imagen: "heroe1.png" )
+    lazy var heroe2 = Heroe(nombre:"Archer", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff2,imagen: "heroe2.png" )
+    lazy var heroe3 = Heroe(nombre:"Thojen", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff3,imagen: "heroe3.png" )
     
    
     //ARMAS

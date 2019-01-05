@@ -34,7 +34,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYj-cZ-BHG">
-                                <rect key="frame" x="105" y="452" width="165" height="84"/>
+                                <rect key="frame" x="105" y="510" width="165" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.024170271520000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="26"/>
@@ -44,7 +44,7 @@
                                 </state>
                                 <connections>
                                     <action selector="sf:" destination="3bc-8q-4lP" eventType="touchUpInside" id="a4z-Gz-Bwu"/>
-                                    <segue destination="f0J-Lu-h3y" kind="show" id="2ln-PP-OB5"/>
+                                    <segue destination="f0J-Lu-h3y" kind="show" identifier="secueFight" id="2ln-PP-OB5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9e-Ws-6L6">
@@ -55,18 +55,12 @@
                                     <segue destination="6Ki-u3-bz3" kind="show" identifier="secueMenu2" id="g7R-BN-etI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" text="NOMBRE MONSTRUO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKB-n0-Cyd">
-                                <rect key="frame" x="-7" y="550" width="366" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="13"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="oXQ-lD-S9M"/>
                     </view>
                     <connections>
+                        <outlet property="buttonFight" destination="pYj-cZ-BHG" id="0de-Fc-gVB"/>
                         <outlet property="pickerView" destination="mfE-v5-KuB" id="EGs-L7-rcg"/>
                     </connections>
                 </viewController>
@@ -78,7 +72,7 @@
         <!--View Controller6-->
         <scene sceneID="1TW-2R-Vvz">
             <objects>
-                <viewController id="f0J-Lu-h3y" customClass="ViewController6" sceneMemberID="viewController">
+                <viewController id="f0J-Lu-h3y" customClass="ViewController6" customModule="DungeonRPG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="quS-x2-OfV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +85,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="monster1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ASo-31-flg">
-                                <rect key="frame" x="115" y="47" width="133" height="118"/>
+                                <rect key="frame" x="118" y="47" width="133" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McR-be-ici">
@@ -122,7 +116,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="heroe1.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Wd-Z9-by4">
-                                <rect key="frame" x="112" y="503" width="132" height="128"/>
+                                <rect key="frame" x="131" y="511" width="114" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stI-by-oKr">
@@ -166,10 +160,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Gp-L2-31A"/>
                     </view>
+                    <connections>
+                        <outlet property="imagenEnemigo" destination="ASo-31-flg" id="uue-5h-kqy"/>
+                        <outlet property="imagenHeroe" destination="7Wd-Z9-by4" id="R4F-1b-O6t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QoX-ly-THz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2623" y="-737"/>
+            <point key="canvasLocation" x="2621.5999999999999" y="-737.18140929535241"/>
         </scene>
         <!--View Controller5-->
         <scene sceneID="AeI-0F-1Ky">
@@ -883,6 +881,6 @@
         <image name="xp.png" width="56" height="57"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="g7R-BN-etI"/>
+        <segue reference="XcY-sN-jnG"/>
     </inferredMetricsTieBreakers>
 </document>

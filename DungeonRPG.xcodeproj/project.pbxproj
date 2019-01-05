@@ -19,6 +19,7 @@
 		33E1358621AF16E7007C1FCC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1358521AF16E7007C1FCC /* Item.swift */; };
 		33E1358821AF1B63007C1FCC /* Monstruo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1358721AF1B63007C1FCC /* Monstruo.swift */; };
 		FA0C8BA021D573410095BD80 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C8B9F21D573410095BD80 /* ViewController2.swift */; };
+		FA1091CD21E105CB00386C23 /* ViewController6.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1091CC21E105CB00386C23 /* ViewController6.swift */; };
 		FA25BB7921D65A29004D0584 /* heroe1.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25BB1121D65A26004D0584 /* heroe1.png */; };
 		FA25BB7A21D65A29004D0584 /* back_heroe.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25BB1221D65A26004D0584 /* back_heroe.png */; };
 		FA25BB7B21D65A29004D0584 /* heroe3.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25BB1321D65A26004D0584 /* heroe3.png */; };
@@ -182,6 +183,7 @@
 		33E1358521AF16E7007C1FCC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		33E1358721AF1B63007C1FCC /* Monstruo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monstruo.swift; sourceTree = "<group>"; };
 		FA0C8B9F21D573410095BD80 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		FA1091CC21E105CB00386C23 /* ViewController6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController6.swift; sourceTree = "<group>"; };
 		FA25BB1121D65A26004D0584 /* heroe1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heroe1.png; sourceTree = "<group>"; };
 		FA25BB1221D65A26004D0584 /* back_heroe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_heroe.png; sourceTree = "<group>"; };
 		FA25BB1321D65A26004D0584 /* heroe3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heroe3.png; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 				33E1358321AF1642007C1FCC /* Stuff.swift */,
 				33E1358521AF16E7007C1FCC /* Item.swift */,
 				33E1358721AF1B63007C1FCC /* Monstruo.swift */,
+				FA1091CC21E105CB00386C23 /* ViewController6.swift */,
 			);
 			path = DungeonRPG;
 			sourceTree = "<group>";
@@ -798,6 +801,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1091CD21E105CB00386C23 /* ViewController6.swift in Sources */,
 				FA0C8BA021D573410095BD80 /* ViewController2.swift in Sources */,
 				33E1358821AF1B63007C1FCC /* Monstruo.swift in Sources */,
 				FA2FBEFB21D93B5A006FA84E /* ViewController3.swift in Sources */,
