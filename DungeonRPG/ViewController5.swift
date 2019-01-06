@@ -15,6 +15,7 @@ class ViewController5: UIViewController,UIPickerViewDelegate,UIPickerViewDataSou
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var labelMoney: UILabel!
     @IBOutlet weak var mensajeLabel: UILabel!
+    @IBOutlet weak var buttonBuy: UIButton!
     
     var costeItem : Int = 0
     
@@ -26,11 +27,57 @@ class ViewController5: UIViewController,UIPickerViewDelegate,UIPickerViewDataSou
                  mostrarAlerta(title: "ERROR", message: "No tienes suficiente dinero!")
  
         }else{
+            
+    
+                
         heroeCompras.setMonedas(valor:heroeCompras.getMonedas() - costeItem)
         labelMoney.text = String (heroeCompras.getMonedas()) + " money"
+            let tipo = item.getTipo()
+            
+            switch(tipo){
+                
+            case "arma":
+                heroeCompras.getStuff().setArma(valor: item)
+                break
+            case "escudo":
+                heroeCompras.getStuff().setEscudo(valor: item)
+                break
+            case "casco":
+                    heroeCompras.getStuff().setCasco(valor: item)
+                break
+            case "botas":
+                    heroeCompras.getStuff().setBotas(valor: item)
+                break
+            case "armadura":
+                    heroeCompras.getStuff().setArmadura(valor: item)
+                break
+            case "anillo":
+                    heroeCompras.getStuff().setAnillo(valor: item)
+                break
+            default:
+                break
+            }
+            
         }
+           mostrarAlerta(title: "REALIZADO", message: "Compra Satisfactoria!")
         
+    }
+    
+    func tieneEseObjeto(heroe : Heroe, item : Item)-> Bool{
+       var loTiene : Bool = false
+        let arma : Item = heroe.getStuff().getArma()
+        let armadura : Item = heroe.getStuff().getArmadura()
+          let botas : Item = heroe.getStuff().getBotas()
+          let escudo : Item = heroe.getStuff().getEscudo()
+          let anillo : Item = heroe.getStuff().getAnillo()
+          let casco : Item = heroe.getStuff().getCasco()
         
+        if(item === arma)||(item === botas)||(item === armadura)||(item === escudo)||(item === anillo)||(item === casco){
+            loTiene = true
+        }
+      
+        
+        return loTiene
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -40,11 +87,13 @@ class ViewController5: UIViewController,UIPickerViewDelegate,UIPickerViewDataSou
     }
     }
     
+ 
+        
     func mostrarAlerta(title: String, message: String) {
         
         let alertaGuia = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        let cancelar = UIAlertAction(title: "Cancelar", style: .default, handler: {(action) in
+        let cancelar = UIAlertAction(title: "OK", style: .default, handler: {(action) in
             
             self.mensajeLabel.text = ""
         })
@@ -81,6 +130,7 @@ class ViewController5: UIViewController,UIPickerViewDelegate,UIPickerViewDataSou
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 100
     }
+    
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
         let myView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
@@ -128,7 +178,19 @@ class ViewController5: UIViewController,UIPickerViewDelegate,UIPickerViewDataSou
         myView.addSubview(suerte)
         myView.addSubview(coste)
         
+        
+        
+        if(tieneEseObjeto(heroe: heroeCompras, item: item)){
+            buttonBuy.isHidden =  true
+        }else{
+             buttonBuy.isHidden = false
+        }
+        
+        
         return myView
+        
+       
+     
     }
     
  

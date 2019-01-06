@@ -46,6 +46,9 @@ public class Item{
     func getImagen()->UIImage{
         return imagen
     }
+    func getTipo()->String{
+        return tipo
+    }
     func setImagen(valor:UIImage){
         self.imagen = valor
     }
