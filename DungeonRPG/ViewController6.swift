@@ -25,4 +25,10 @@ class ViewController6: UIViewController {
         imagenHeroe.image = UIImage(named: heroeFight.getImagen())
         imagenEnemigo.image = UIImage(named: enemigoFight.getImagen())
 }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "secueVolverFight" ) {
+            let cuartaView = segue.destination as! ViewController4
+            cuartaView.heroeLucha = heroeFight
+        }
+    }
 }
