@@ -35,6 +35,11 @@ class ViewController4: UIViewController,UIPickerViewDelegate,UIPickerViewDataSou
         pickerView.delegate = self
         pickerView.dataSource = self
         buttonFight.layer.cornerRadius = 10
+        pickerView.selectRow(0, inComponent: 0, animated: true)
+        
+        print ( monstruoElegido)
+        
+        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

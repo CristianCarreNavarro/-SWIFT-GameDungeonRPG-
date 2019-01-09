@@ -109,12 +109,10 @@
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stI-by-oKr">
                                 <rect key="frame" x="24" y="366" width="320" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1c-gj-qiD">
                                 <rect key="frame" x="24" y="215" width="320" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </pickerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="kKV-dm-fA4">
                                 <rect key="frame" x="317" y="522" width="51" height="45"/>
@@ -162,6 +160,8 @@
                         <viewLayoutGuide key="safeArea" id="6Gp-L2-31A"/>
                     </view>
                     <connections>
+                        <outlet property="DadosHeroe" destination="stI-by-oKr" id="Nmo-c3-aWe"/>
+                        <outlet property="DadosMonstruo" destination="D1c-gj-qiD" id="w6C-H7-8V5"/>
                         <outlet property="imagenEnemigo" destination="ASo-31-flg" id="uue-5h-kqy"/>
                         <outlet property="imagenHeroe" destination="7Wd-Z9-by4" id="R4F-1b-O6t"/>
                     </connections>
@@ -902,7 +902,7 @@
         <image name="xp.png" width="56" height="57"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XcY-sN-jnG"/>
+        <segue reference="g7R-BN-etI"/>
         <segue reference="1T9-cP-TYY"/>
     </inferredMetricsTieBreakers>
 </document>

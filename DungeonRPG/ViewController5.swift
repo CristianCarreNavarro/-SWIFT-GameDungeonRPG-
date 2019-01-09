@@ -75,8 +75,7 @@ class ViewController5: UIViewController,UIPickerViewDelegate,UIPickerViewDataSou
         if(item === arma)||(item === botas)||(item === armadura)||(item === escudo)||(item === anillo)||(item === casco){
             loTiene = true
         }
-      
-        
+
         return loTiene
     }
     
@@ -111,6 +110,7 @@ class ViewController5: UIViewController,UIPickerViewDelegate,UIPickerViewDataSou
         labelMoney.text = String (heroeCompras.getMonedas()) + " money"
         labelMoney.textAlignment = .left
         mensajeLabel.text = ""
+        
         
     }
     
