@@ -90,6 +90,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="funtionAttack:" destination="f0J-Lu-h3y" eventType="touchUpInside" id="iBB-tp-9Mk"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="   golpe :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRw-CD-Mol">
                                 <rect key="frame" x="24" y="466" width="275" height="59"/>
@@ -162,6 +165,9 @@
                     <connections>
                         <outlet property="DadosHeroe" destination="stI-by-oKr" id="Nmo-c3-aWe"/>
                         <outlet property="DadosMonstruo" destination="D1c-gj-qiD" id="w6C-H7-8V5"/>
+                        <outlet property="buttonAttack" destination="McR-be-ici" id="8nN-ID-zTt"/>
+                        <outlet property="golpeEnemigo" destination="7tX-t2-XYn" id="Enz-G1-mXY"/>
+                        <outlet property="golpeHeroe" destination="tRw-CD-Mol" id="X4V-kd-Bzu"/>
                         <outlet property="imagenEnemigo" destination="ASo-31-flg" id="uue-5h-kqy"/>
                         <outlet property="imagenHeroe" destination="7Wd-Z9-by4" id="R4F-1b-O6t"/>
                     </connections>

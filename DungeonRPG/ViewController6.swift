@@ -23,6 +23,9 @@ class ViewController6: UIViewController,UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var DadosMonstruo: UIPickerView!
     @IBOutlet weak var DadosHeroe: UIPickerView!
     
+    @IBOutlet weak var buttonAttack: UIButton!
+    @IBOutlet weak var golpeEnemigo: UILabel!
+    @IBOutlet weak var golpeHeroe: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +42,7 @@ class ViewController6: UIViewController,UIPickerViewDataSource, UIPickerViewDele
         DadosHeroe.delegate = self
         DadosHeroe.dataSource = self
         DadosHeroe.tag = 2
+        buttonAttack.layer.cornerRadius = 10
 
  }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -114,6 +118,62 @@ if(pickerView.tag == 2){
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 120.0
     }
+    
+    
+    
+
+    
+    @IBAction func funtionAttack(_ sender: Any) {
+     
+           animateFight(num:ViewController6.arrayDadosEnemigo.count)
+           animateFight(num:ViewController6.arrayDadosHeroe.count)
+    }
+    
+    
+    func animateFight(num:Int) {
+        let randomNumber1 = Int(arc4random_uniform(UInt32(num)))
+        let randomNumber2 = Int(arc4random_uniform(UInt32(num)))
+        let randomNumber3 = Int(arc4random_uniform(UInt32(num)))
+        let randomNumber4 = Int(arc4random_uniform(UInt32(num)))
+        let randomNumber5 = Int(arc4random_uniform(UInt32(num)))
+        let randomNumber6 = Int(arc4random_uniform(UInt32(num)))
+        
+        let ataqueEnemigo: Int = randomNumber1+randomNumber2+randomNumber3
+        let ataqueHeroe: Int = randomNumber4+randomNumber5+randomNumber6
+       
+        golpeEnemigo.text = "   golpe: " + String (ataqueEnemigo)
+        golpeHeroe.text = "   golpe: " + String (ataqueHeroe)
+        
+        DadosMonstruo.selectRow(randomNumber1, inComponent: 0, animated: true)
+        DadosMonstruo.selectRow(randomNumber2, inComponent: 1, animated: true)
+        DadosMonstruo.selectRow(randomNumber3, inComponent: 2, animated: true)
+        
+        
+        DadosHeroe.selectRow(randomNumber4, inComponent: 0, animated: true)
+        DadosHeroe.selectRow(randomNumber5, inComponent: 1, animated: true)
+        DadosHeroe.selectRow(randomNumber6, inComponent: 2, animated: true)
+        
+         print ("num1:" + String (randomNumber1))
+         print ("num2:" + String (randomNumber2))
+         print ("num3:" + String (randomNumber3))
+        
+         print ("num4:" + String (randomNumber4))
+         print ("num5:" + String (randomNumber5))
+         print ("num6:" + String (randomNumber6))
+        
+        
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+        }, completion: { (finished) in
+            UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+             }, completion: nil)
+         /*    UIView.animate(withDuration: 1, animations: { self.DadosMonstruo.backgroundColor = .red}, completion: nil)*/
+        })
+    
+    }
+    
+    
+    
+    
     
     
     
