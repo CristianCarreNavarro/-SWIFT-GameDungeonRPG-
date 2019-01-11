@@ -253,10 +253,71 @@ if(pickerView.tag == 2){
         
     }
     
+  
+    
+    func perderCorazones(numerovidas : Int , corazon1 : UIImageView, corazon2 : UIImageView, corazon3 : UIImageView, corazon4 : UIImageView){
+        
+        var arrayCorazones = [UIImage(named: "heart.png"),UIImage(named: "heartEmpty.png")]
+        
+        switch (numerovidas) {
+   
+        case 3:
+         animateLostcorazones(imageView: corazon4, images:[arrayCorazones])!
+            corazon4.isHidden = true
+            break
+        case 2:
+            corazon1.isHidden = false
+            corazon2.isHidden = false
+            corazon3.isHidden = true
+            corazon4.isHidden = true
+            break
+        case 1:
+            corazon1.isHidden = false
+            corazon2.isHidden = true
+            corazon3.isHidden = true
+            corazon4.isHidden = true
+            break
+        case 0:
+            corazon1.isHidden = true
+            corazon2.isHidden = true
+            corazon3.isHidden = true
+            corazon4.isHidden = true
+            break
+        default:
+            break
+        }
+    }
+    
+    func animateLostcorazones(imageView: UIImageView, images:[UIImage]){
+        imageView.animationImages = images
+        imageView.animationDuration = 1.0
+        imageView.animationRepeatCount = 2
+        imageView.startAnimating()
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
     
     
 }
+
 
