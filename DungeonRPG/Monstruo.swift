@@ -55,7 +55,9 @@ public class Monstruo{
     func getExperienciaMonstruo()->Int{
         return experienciaMonstruo
     }
-    
+    func setVida(valor: Int){
+        self.vidaMonstruo=valor
+    }
     
     
 }

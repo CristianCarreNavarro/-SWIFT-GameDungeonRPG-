@@ -282,6 +282,7 @@
 		FA25BB7621D65A28004D0584 /* magic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magic.png; sourceTree = "<group>"; };
 		FA25BB7721D65A28004D0584 /* preset_backpack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preset_backpack.png; sourceTree = "<group>"; };
 		FA25BB7821D65A28004D0584 /* heart_middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_middle.png; sourceTree = "<group>"; };
+		FA2CCBB621E807F0006D5FCE /* RIP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RIP.png; sourceTree = "<group>"; };
 		FA2FBEFA21D93B5A006FA84E /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		FA2FBEFC21D9882C006FA84E /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 		FA2FBEFE21D98A17006FA84E /* ViewController5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController5.swift; sourceTree = "<group>"; };
@@ -421,6 +422,7 @@
 		FA25BB1021D65A26004D0584 /* heroes */ = {
 			isa = PBXGroup;
 			children = (
+				FA2CCBB621E807F0006D5FCE /* RIP.png */,
 				FA25BB1121D65A26004D0584 /* heroe1.png */,
 				FA25BB1221D65A26004D0584 /* back_heroe.png */,
 				FA25BB1321D65A26004D0584 /* heroe3.png */,

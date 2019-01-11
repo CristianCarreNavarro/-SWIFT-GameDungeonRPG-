@@ -31,13 +31,18 @@ class ViewController3: UIViewController {
     @IBOutlet weak var money: UILabel!
     @IBOutlet weak var experiencia: UILabel!
    
+    @IBOutlet weak var corazon1: UIImageView!
+    @IBOutlet weak var corazon2: UIImageView!
+    @IBOutlet weak var corazon3: UIImageView!
+    @IBOutlet weak var corazon4: UIImageView!
     
-   
-    
-    
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+         mostrarCorazones(numerovidas : heroeInventory.getVida(),corazon1: corazon1,corazon2: corazon2,corazon3: corazon3,corazon4: corazon4)
+        
         
         if (heroeInventory.getNombre()=="Agro"){
             ImageHeroe.image = UIImage(named: "heroe1.png")

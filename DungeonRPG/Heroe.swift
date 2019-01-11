@@ -15,19 +15,24 @@ public class Heroe{
     private var monedas: Int
     private var stuff: Stuff
     private var imagen : String
+    private var vida : Int
     
-    init(nombre: String,nivel: Int, experiencia: Int, monedas: Int,stuff : Stuff,imagen : String){
+    init(nombre: String,nivel: Int, experiencia: Int, monedas: Int,stuff : Stuff,imagen : String,vida : Int){
         self.nombre = nombre
         self.nivel = nivel
+        self.vida = vida
         self.experiencia = experiencia
         self.monedas = monedas
         self.stuff = stuff
         self.imagen = imagen
         
     }
-    func getImagen()->String{
+        func getVida()->Int{
+        return vida
+        }
+        func getImagen()->String{
         return imagen
-    }
+        }
         func getStuff()->Stuff{
         return stuff
         }
@@ -49,7 +54,9 @@ public class Heroe{
         func setMonedas(valor: Int){
         self.monedas=valor
         }
-    
+        func setVidas(valor: Int){
+        self.vida=valor
+       }
     
     func  conseguirAtaque(stuff : Stuff)-> Int{
         var ataque : Int  = 0

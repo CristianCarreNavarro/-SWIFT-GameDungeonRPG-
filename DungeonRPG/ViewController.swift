@@ -36,6 +36,21 @@ import UIKit
     
     @IBOutlet weak var defensaThojen: UILabel!
     
+    @IBOutlet weak var heart1Heroe1: UIImageView!
+    @IBOutlet weak var heart2Heroe1: UIImageView!
+    @IBOutlet weak var heart3Heroe1: UIImageView!
+    @IBOutlet weak var heart4Heroe1: UIImageView!
+    
+    @IBOutlet weak var heart1Heroe2: UIImageView!
+    @IBOutlet weak var heart2Heroe2: UIImageView!
+    @IBOutlet weak var heart3Heroe2: UIImageView!
+    @IBOutlet weak var heart4Heroe2: UIImageView!
+    
+    @IBOutlet weak var heart1Heroe3: UIImageView!
+    @IBOutlet weak var heart2Heroe3: UIImageView!
+    @IBOutlet weak var heart3Heroe3: UIImageView!
+    @IBOutlet weak var heart4Heroe3: UIImageView!
+    
     
     static var  arrayItems :Array<Any> = []
     
@@ -67,17 +82,20 @@ import UIKit
         defensaThojen.text = String (heroe3.conseguirDefensa(stuff : stuff3))
         luckyThojen.text = String (heroe3.conseguirSuerte(stuff : stuff3))
       
-     
+        mostrarCorazones(numerovidas: heroe1.getVida(),corazon1: heart1Heroe1,corazon2: heart2Heroe1,corazon3: heart3Heroe1,corazon4: heart4Heroe1)
+        mostrarCorazones(numerovidas: heroe2.getVida(),corazon1: heart1Heroe2,corazon2: heart2Heroe2,corazon3: heart3Heroe2,corazon4: heart4Heroe2)
+        mostrarCorazones(numerovidas: heroe3.getVida(),corazon1: heart1Heroe3,corazon2: heart2Heroe3,corazon3: heart3Heroe3,corazon4: heart4Heroe3)
     }
 
 
- 
+    static var listaMonstruos = [Monstruo(nombreMonstruo:"Dildok usadok", nivelMonstruo: 2, vidaMonstruo: 1, ataqueMonstruo: 10, defensaMonstruo: 45, premioMonstruo: 20, experienciaMonstruo: 50, imagen: "monster8.png"), Monstruo(nombreMonstruo:"Chicle pisado", nivelMonstruo: 3, vidaMonstruo: 1, ataqueMonstruo: 12, defensaMonstruo: 48, premioMonstruo: 20, experienciaMonstruo: 50, imagen: "monster9.png"),Monstruo(nombreMonstruo:"EsteroideMan", nivelMonstruo: 7, vidaMonstruo: 3, ataqueMonstruo: 80, defensaMonstruo: 200, premioMonstruo: 200, experienciaMonstruo: 200, imagen: "monster1.png"),Monstruo(nombreMonstruo:"Garrapata dorada", nivelMonstruo: 5, vidaMonstruo: 2, ataqueMonstruo: 36, defensaMonstruo: 73, premioMonstruo: 145, experienciaMonstruo: 500, imagen: "monster11.png"),Monstruo(nombreMonstruo:"Ratero dos dagas", nivelMonstruo: 6, vidaMonstruo: 3, ataqueMonstruo: 77, defensaMonstruo: 50, premioMonstruo: 127, experienciaMonstruo: 100, imagen: "monster6.png"),Monstruo(nombreMonstruo:"Manos arañiba", nivelMonstruo: 8, vidaMonstruo: 3, ataqueMonstruo: 85, defensaMonstruo: 63, premioMonstruo: 150, experienciaMonstruo: 200, imagen: "monster5.png"),Monstruo(nombreMonstruo:"Espadachin-chin", nivelMonstruo: 9, vidaMonstruo: 4, ataqueMonstruo: 115, defensaMonstruo: 107, premioMonstruo: 350, experienciaMonstruo: 200, imagen: "monster15.png"),Monstruo(nombreMonstruo:"Mala-Hierba", nivelMonstruo: 4, vidaMonstruo: 4, ataqueMonstruo: 5, defensaMonstruo: 107, premioMonstruo: 90, experienciaMonstruo: 100, imagen: "monster2.png") ]
+
 
    
     //HEROES
-    lazy var heroe1 = Heroe(nombre:"Agro", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff1, imagen: "heroe1.png" )
-    lazy var heroe2 = Heroe(nombre:"Archer", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff2,imagen: "heroe2.png" )
-    lazy var heroe3 = Heroe(nombre:"Thojen", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff3,imagen: "heroe3.png" )
+    lazy var heroe1 = Heroe(nombre:"Agro", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff1, imagen: "heroe1.png", vida:4 )
+    lazy var heroe2 = Heroe(nombre:"Archer", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff2,imagen: "heroe2.png",vida:3 )
+    lazy var heroe3 = Heroe(nombre:"Thojen", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff3,imagen: "heroe3.png",vida:2 )
     
    
     //ARMAS
@@ -139,3 +157,42 @@ import UIKit
     }
 }
 
+
+
+func mostrarCorazones(numerovidas : Int , corazon1 : UIImageView, corazon2 : UIImageView, corazon3 : UIImageView, corazon4 : UIImageView){
+    
+    switch (numerovidas) {
+    case 4:
+        corazon1.isHidden = false
+           corazon2.isHidden = false
+           corazon3.isHidden = false
+           corazon4.isHidden = false
+        break
+    case 3:
+        corazon1.isHidden = false
+        corazon2.isHidden = false
+        corazon3.isHidden = false
+        corazon4.isHidden = true
+        break
+    case 2:
+        corazon1.isHidden = false
+        corazon2.isHidden = false
+        corazon3.isHidden = true
+        corazon4.isHidden = true
+        break
+    case 1:
+        corazon1.isHidden = false
+        corazon2.isHidden = true
+        corazon3.isHidden = true
+        corazon4.isHidden = true
+        break
+    case 0:
+        corazon1.isHidden = true
+        corazon2.isHidden = true
+        corazon3.isHidden = true
+        corazon4.isHidden = true
+        break
+    default:
+        break
+    }
+}

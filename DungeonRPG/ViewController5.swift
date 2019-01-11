@@ -114,7 +114,7 @@ class ViewController5: UIViewController,UIPickerViewDelegate,UIPickerViewDataSou
         
     }
     
-    //let dict =  ["boots.png": ViewController.botasCuero, "escudo": ViewController.escudoBarbaSanta] as [String : Any]
+
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

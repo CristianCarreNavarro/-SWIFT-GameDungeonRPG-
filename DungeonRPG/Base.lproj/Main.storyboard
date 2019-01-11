@@ -95,20 +95,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="   golpe :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRw-CD-Mol">
-                                <rect key="frame" x="24" y="466" width="275" height="59"/>
+                                <rect key="frame" x="104" y="462" width="179" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="bVN-X9-6fy">
-                                <rect key="frame" x="318" y="137" width="51" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zfy-al-eQQ">
-                                <rect key="frame" x="318" y="478" width="51" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stI-by-oKr">
                                 <rect key="frame" x="24" y="366" width="320" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -117,24 +109,12 @@
                                 <rect key="frame" x="24" y="215" width="320" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="kKV-dm-fA4">
-                                <rect key="frame" x="317" y="522" width="51" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="btd-uj-cQA">
-                                <rect key="frame" x="317" y="572" width="51" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="NYz-mi-L5k">
-                                <rect key="frame" x="318" y="85" width="51" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="PsV-LK-I1g">
-                                <rect key="frame" x="318" y="33" width="51" height="45"/>
+                                <rect key="frame" x="318" y="56" width="41" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" text="   golpe:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tX-t2-XYn">
-                                <rect key="frame" x="24" y="157" width="294" height="59"/>
+                                <rect key="frame" x="102" y="168" width="208" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -158,6 +138,41 @@
                                 <rect key="frame" x="130" y="529" width="114" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="gtq-s2-3NI">
+                                <rect key="frame" x="318" y="97" width="41" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="acE-4W-Ldl">
+                                <rect key="frame" x="318" y="138" width="41" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="5dl-FT-eXs">
+                                <rect key="frame" x="318" y="181" width="41" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="idi-4J-flh">
+                                <rect key="frame" x="318" y="452" width="41" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="pq1-An-xuh">
+                                <rect key="frame" x="318" y="493" width="41" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="v9m-GX-ABu">
+                                <rect key="frame" x="318" y="534" width="41" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="sqN-FE-bYb">
+                                <rect key="frame" x="318" y="577" width="41" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWz-Wy-HvD">
+                                <rect key="frame" x="104" y="268" width="183" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.61346340673575128" green="0.1298076852341746" blue="0.079718552800329037" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Gp-L2-31A"/>
@@ -166,10 +181,19 @@
                         <outlet property="DadosHeroe" destination="stI-by-oKr" id="Nmo-c3-aWe"/>
                         <outlet property="DadosMonstruo" destination="D1c-gj-qiD" id="w6C-H7-8V5"/>
                         <outlet property="buttonAttack" destination="McR-be-ici" id="8nN-ID-zTt"/>
+                        <outlet property="corazon1Enemigo" destination="PsV-LK-I1g" id="fRa-YT-R2F"/>
+                        <outlet property="corazon1Heroe" destination="sqN-FE-bYb" id="DZN-kF-1LX"/>
+                        <outlet property="corazon2Enemigo" destination="gtq-s2-3NI" id="nfP-ZX-NJY"/>
+                        <outlet property="corazon2Heroe" destination="v9m-GX-ABu" id="LiT-KJ-ytc"/>
+                        <outlet property="corazon3Enemigo" destination="acE-4W-Ldl" id="ZNP-5h-hku"/>
+                        <outlet property="corazon3Heroe" destination="pq1-An-xuh" id="gz5-R2-0FA"/>
+                        <outlet property="corazon4Enemigo" destination="5dl-FT-eXs" id="b10-l1-QVj"/>
+                        <outlet property="corazon4Heroe" destination="idi-4J-flh" id="dmV-OU-pHP"/>
                         <outlet property="golpeEnemigo" destination="7tX-t2-XYn" id="Enz-G1-mXY"/>
                         <outlet property="golpeHeroe" destination="tRw-CD-Mol" id="X4V-kd-Bzu"/>
                         <outlet property="imagenEnemigo" destination="ASo-31-flg" id="uue-5h-kqy"/>
                         <outlet property="imagenHeroe" destination="7Wd-Z9-by4" id="R4F-1b-O6t"/>
+                        <outlet property="mensajeLabel" destination="wWz-Wy-HvD" id="Lmt-5f-f2B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QoX-ly-THz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -620,14 +644,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1l-bq-3B2">
-                                <rect key="frame" x="74" y="482" width="229" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="boton3:" destination="FeR-u9-KfF" eventType="touchUpInside" id="qZj-ag-aKb"/>
-                                    <segue destination="6Ki-u3-bz3" kind="show" identifier="secue2" id="d8m-co-Tpm"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="heroe1.png" translatesAutoresizingMaskIntoConstraints="NO" id="KR2-nv-Toy">
                                 <rect key="frame" x="82" y="161" width="49" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -648,11 +664,67 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIL-ec-Viw">
-                                <rect key="frame" x="72" y="144" width="229" height="99"/>
+                                <rect key="frame" x="81" y="146" width="229" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="boton1:" destination="FeR-u9-KfF" eventType="touchUpInside" id="gYf-wX-0zV"/>
                                     <segue destination="6Ki-u3-bz3" kind="show" identifier="secue1" id="ghc-1c-QJy"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="THV-TY-paE">
+                                <rect key="frame" x="185" y="151" width="26" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="vub-gY-fCi">
+                                <rect key="frame" x="211" y="151" width="26" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="KbF-Ga-lF2">
+                                <rect key="frame" x="238" y="151" width="26" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="SMR-jl-dxK">
+                                <rect key="frame" x="264" y="151" width="26" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="Igd-JL-8m8">
+                                <rect key="frame" x="192" y="317" width="26" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="XGm-as-1f2">
+                                <rect key="frame" x="218" y="317" width="26" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="dmM-BE-4l3">
+                                <rect key="frame" x="245" y="317" width="26" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="V6o-2X-63j">
+                                <rect key="frame" x="271" y="317" width="26" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="8XJ-zF-FOC">
+                                <rect key="frame" x="194" y="488" width="26" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="pJI-rf-N3D">
+                                <rect key="frame" x="220" y="488" width="26" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="SxO-r7-dBl">
+                                <rect key="frame" x="247" y="488" width="26" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="kRc-uc-gDi">
+                                <rect key="frame" x="273" y="488" width="26" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1l-bq-3B2">
+                                <rect key="frame" x="77" y="510" width="229" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="boton3:" destination="FeR-u9-KfF" eventType="touchUpInside" id="qZj-ag-aKb"/>
+                                    <segue destination="6Ki-u3-bz3" kind="show" identifier="secue2" id="d8m-co-Tpm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -666,6 +738,18 @@
                         <outlet property="defensaAgro" destination="btt-HE-Tcl" id="Rhc-bs-Ttd"/>
                         <outlet property="defensaArcher" destination="cfl-gB-vO1" id="sv9-FV-Q9O"/>
                         <outlet property="defensaThojen" destination="r2Z-oU-O6v" id="xyh-kk-7Oz"/>
+                        <outlet property="heart1Heroe1" destination="THV-TY-paE" id="Q3Y-5Z-14Y"/>
+                        <outlet property="heart1Heroe2" destination="Igd-JL-8m8" id="f9S-UG-WYT"/>
+                        <outlet property="heart1Heroe3" destination="8XJ-zF-FOC" id="O9h-kJ-xuF"/>
+                        <outlet property="heart2Heroe1" destination="vub-gY-fCi" id="T9I-yK-bmh"/>
+                        <outlet property="heart2Heroe2" destination="XGm-as-1f2" id="zBH-qT-sGe"/>
+                        <outlet property="heart2Heroe3" destination="pJI-rf-N3D" id="hJa-yG-N2S"/>
+                        <outlet property="heart3Heroe1" destination="KbF-Ga-lF2" id="hFK-eG-xg0"/>
+                        <outlet property="heart3Heroe2" destination="dmM-BE-4l3" id="nEL-uU-oeG"/>
+                        <outlet property="heart3Heroe3" destination="SxO-r7-dBl" id="gLs-kB-Tv3"/>
+                        <outlet property="heart4Heroe1" destination="SMR-jl-dxK" id="a6C-lq-JzC"/>
+                        <outlet property="heart4Heroe2" destination="V6o-2X-63j" id="Oa4-rq-DuF"/>
+                        <outlet property="heart4Heroe3" destination="kRc-uc-gDi" id="a0r-EE-lQ3"/>
                         <outlet property="luckyAgro" destination="bcz-QU-lzE" id="Dqi-Bw-3Ah"/>
                         <outlet property="luckyArcher" destination="N7W-zc-lPl" id="Qbt-fL-J9r"/>
                         <outlet property="luckyThojen" destination="AbH-QW-cCG" id="vST-An-iYs"/>
@@ -853,13 +937,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" text="Agro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLm-dq-QEV">
-                                <rect key="frame" x="123" y="451" width="139" height="59"/>
+                                <rect key="frame" x="22" y="446" width="139" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="18"/>
                                 <color key="textColor" red="1" green="0.94248019869865063" blue="0.18014881763530477" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="1" green="0.0" blue="0.024170271520000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="shadowColor" red="1" green="0.071372757966156608" blue="0.0040313595719907447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="xKl-Fk-1IV">
+                                <rect key="frame" x="159" y="463" width="34" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="n0F-Mv-pa8">
+                                <rect key="frame" x="197" y="463" width="34" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="XDV-HH-HNB">
+                                <rect key="frame" x="234" y="463" width="34" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="MWl-55-axT">
+                                <rect key="frame" x="270" y="463" width="34" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -877,6 +977,10 @@
                         <outlet property="boxBotas" destination="Hwn-x7-krU" id="vfq-W5-qXa"/>
                         <outlet property="boxCasco" destination="oNq-EM-zCg" id="Lkp-Am-hwC"/>
                         <outlet property="boxEscudo" destination="8uh-VT-fOv" id="6cs-a7-hFl"/>
+                        <outlet property="corazon1" destination="xKl-Fk-1IV" id="8fh-UX-tkh"/>
+                        <outlet property="corazon2" destination="n0F-Mv-pa8" id="tHh-oR-wIA"/>
+                        <outlet property="corazon3" destination="XDV-HH-HNB" id="s3A-m6-MIb"/>
+                        <outlet property="corazon4" destination="MWl-55-axT" id="n5n-lZ-Ale"/>
                         <outlet property="defensa" destination="bdy-yy-Kvm" id="xzG-Hv-nnW"/>
                         <outlet property="experiencia" destination="wUP-Ce-jgC" id="es7-ho-1MS"/>
                         <outlet property="magia" destination="ZAN-b0-g03" id="ouo-Ja-c2y"/>
@@ -908,7 +1012,7 @@
         <image name="xp.png" width="56" height="57"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="g7R-BN-etI"/>
+        <segue reference="XcY-sN-jnG"/>
         <segue reference="1T9-cP-TYY"/>
     </inferredMetricsTieBreakers>
 </document>

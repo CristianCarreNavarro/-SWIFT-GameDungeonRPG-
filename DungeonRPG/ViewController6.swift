@@ -8,7 +8,7 @@
 import UIKit
 
 
-class ViewController6: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate {
+class ViewController6: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate,UITextFieldDelegate  {
     
     var enemigoFight : Monstruo!
     var heroeFight : Heroe!
@@ -16,8 +16,8 @@ class ViewController6: UIViewController,UIPickerViewDataSource, UIPickerViewDele
        static var arrayDadosHeroe : Array<Any> = []
        static var arrayDadosEnemigo : Array<Any> = []
     
+    @IBOutlet weak var mensajeLabel: UILabel!
     @IBOutlet weak var imagenEnemigo: UIImageView!
-    
     @IBOutlet weak var imagenHeroe: UIImageView!
     
     @IBOutlet weak var DadosMonstruo: UIPickerView!
@@ -27,14 +27,46 @@ class ViewController6: UIViewController,UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var golpeEnemigo: UILabel!
     @IBOutlet weak var golpeHeroe: UILabel!
     
+    @IBOutlet weak var corazon1Enemigo: UIImageView!
+    @IBOutlet weak var corazon2Enemigo: UIImageView!
+    @IBOutlet weak var corazon3Enemigo: UIImageView!
+    @IBOutlet weak var corazon4Enemigo: UIImageView!
+    
+    
+    @IBOutlet weak var corazon1Heroe: UIImageView!
+    @IBOutlet weak var corazon2Heroe: UIImageView!
+    @IBOutlet weak var corazon3Heroe: UIImageView!
+    @IBOutlet weak var corazon4Heroe: UIImageView!
+    
+    
+    
+    func mostrarAlerta(title: String, message: String) {
+        
+        let alertaGuia = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let OK = UIAlertAction(title: "OK", style: .default, handler: {(action) in
+            
+            self.mensajeLabel.text = ""
+        })
+        
+        alertaGuia.addAction(OK)
+        present(alertaGuia, animated: true, completion: nil)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+     mensajeLabel.text = ""
+        
+        mostrarCorazones(numerovidas : heroeFight.getVida(),corazon1: corazon1Heroe,corazon2: corazon2Heroe,corazon3: corazon3Heroe,corazon4: corazon4Heroe)
+        
+         mostrarCorazones(numerovidas : enemigoFight.getVidaMonstruo(),corazon1: corazon1Enemigo,corazon2: corazon2Enemigo,corazon3: corazon3Enemigo,corazon4: corazon4Enemigo)
+        
         imagenHeroe.image = UIImage(named: heroeFight.getImagen())
         imagenEnemigo.image = UIImage(named: enemigoFight.getImagen())
         
         ViewController6.arrayDadosEnemigo = ["dice1U.png","dice2U.png","dice3U.png","dice4U.png","dice5U.png","dice6U.png","dice7U.png","dice8U.png","dice9U.png","dice10U.png","dice11U.png","dice12U.png"]
-            ViewController6.arrayDadosHeroe = ["dice1.png","dice2.png","dice3.png","dice4.png","dice5.png","dice6.png","dice7.png","dice8.png","dice9.png","dice10.png","dice11.png","dice12.png"]
+        ViewController6.arrayDadosHeroe = ["dice1.png","dice2.png","dice3.png","dice4.png","dice5.png","dice6.png","dice7.png","dice8.png","dice9.png","dice10.png","dice11.png","dice12.png"]
         
         DadosMonstruo.delegate = self
         DadosMonstruo.dataSource = self
@@ -45,6 +77,7 @@ class ViewController6: UIViewController,UIPickerViewDataSource, UIPickerViewDele
         buttonAttack.layer.cornerRadius = 10
 
  }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "secueVolverFight" ) {
             let cuartaView = segue.destination as! ViewController4
@@ -120,17 +153,20 @@ if(pickerView.tag == 2){
     }
     
     
-    
-
+    var ataqueEnemigo: Int = 0
+    var ataqueHeroe: Int = 0
     
     @IBAction func funtionAttack(_ sender: Any) {
      
            animateFight(num:ViewController6.arrayDadosEnemigo.count)
            animateFight(num:ViewController6.arrayDadosHeroe.count)
+        
+        ataque(atakEnemigo : ataqueEnemigo, atakHeroe : ataqueHeroe ,heroe : heroeFight, monstruo : enemigoFight )
     }
     
     
     func animateFight(num:Int) {
+        
         let randomNumber1 = Int(arc4random_uniform(UInt32(num)))
         let randomNumber2 = Int(arc4random_uniform(UInt32(num)))
         let randomNumber3 = Int(arc4random_uniform(UInt32(num)))
@@ -138,8 +174,8 @@ if(pickerView.tag == 2){
         let randomNumber5 = Int(arc4random_uniform(UInt32(num)))
         let randomNumber6 = Int(arc4random_uniform(UInt32(num)))
         
-        let ataqueEnemigo: Int = randomNumber1+randomNumber2+randomNumber3
-        let ataqueHeroe: Int = randomNumber4+randomNumber5+randomNumber6
+         ataqueEnemigo = randomNumber1+randomNumber2+randomNumber3
+         ataqueHeroe = randomNumber4+randomNumber5+randomNumber6
        
         golpeEnemigo.text = "   golpe: " + String (ataqueEnemigo)
         golpeHeroe.text = "   golpe: " + String (ataqueHeroe)
@@ -152,6 +188,7 @@ if(pickerView.tag == 2){
         DadosHeroe.selectRow(randomNumber4, inComponent: 0, animated: true)
         DadosHeroe.selectRow(randomNumber5, inComponent: 1, animated: true)
         DadosHeroe.selectRow(randomNumber6, inComponent: 2, animated: true)
+        
         
          print ("num1:" + String (randomNumber1))
          print ("num2:" + String (randomNumber2))
@@ -171,6 +208,50 @@ if(pickerView.tag == 2){
     
     }
     
+    func ataque(atakEnemigo : Int,atakHeroe : Int,heroe : Heroe, monstruo : Monstruo ){
+        
+        if(atakEnemigo>atakHeroe){
+            heroe.setVidas(valor: heroe.getVida()-1)
+       
+        }
+        if(atakHeroe>atakEnemigo){
+            monstruo.setVida(valor: monstruo.getVidaMonstruo()-1)
+        
+        }
+        
+        
+        
+        mostrarCorazones(numerovidas : heroeFight.getVida(),corazon1: corazon1Heroe,corazon2: corazon2Heroe,corazon3: corazon3Heroe,corazon4: corazon4Heroe)
+        
+        mostrarCorazones(numerovidas : enemigoFight.getVidaMonstruo(),corazon1: corazon1Enemigo,corazon2: corazon2Enemigo,corazon3: corazon3Enemigo,corazon4: corazon4Enemigo)
+        
+        if (heroeFight.getVida()==0){
+            imagenHeroe.image = UIImage(named: "RIP.png")
+            
+        mostrarAlerta(title: "MUERTO", message: "No tienes suficiente vidas! Te han matado!")
+     
+            
+            //let index = ViewController.listaMonstruos.index(value(forKey: enemigoFight.getNombreMonstruo()))
+            
+           // ViewController.listaMonstruos.remove(at: index)
+           
+        }
+        if(enemigoFight.getVidaMonstruo()==0){
+            imagenEnemigo.image = UIImage(named: "RIP.png")
+            
+          mostrarAlerta(title: "KILL HIM", message: "Felicidades Has Ganado la Batalla!!")
+            
+          heroeFight.setMonedas(valor: heroeFight.getMonedas() + enemigoFight.getPremioMonstruo())
+          heroeFight.setExperiencia(valor: heroeFight.getExperiencia() + enemigoFight.getExperienciaMonstruo())
+          mostrarAlerta(title: "RECOMPENSA", message: "Obtienes su dinero y experiencia!")
+            
+            
+            
+        }
+        
+        
+        
+    }
     
     
     
