@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller4-->
+        <!--Elegir Monstruo-->
         <scene sceneID="VVC-0n-qDF">
             <objects>
-                <viewController id="AgB-HB-jMB" customClass="ViewController4" customModule="DungeonRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AgB-HB-jMB" customClass="ElegirMonstruo" customModule="DungeonRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z3c-Uf-rkc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="6Ki-u3-bz3" kind="show" identifier="secueMenu2" id="g7R-BN-etI"/>
+                                    <segue destination="6Ki-u3-bz3" kind="show" id="lJ8-HV-YVD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYj-cZ-BHG">
@@ -51,8 +51,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="sf:" destination="3bc-8q-4lP" eventType="touchUpInside" id="a4z-Gz-Bwu"/>
-                                    <segue destination="f0J-Lu-h3y" kind="show" identifier="secueFight" id="2ln-PP-OB5"/>
+                                    <segue destination="f0J-Lu-h3y" kind="show" id="OEP-Ra-gtB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,14 +64,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OwB-J3-LNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="3bc-8q-4lP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1680.8" y="-737.18140929535241"/>
         </scene>
-        <!--View Controller6-->
+        <!--Batalla-->
         <scene sceneID="1TW-2R-Vvz">
             <objects>
-                <viewController id="f0J-Lu-h3y" customClass="ViewController6" customModule="DungeonRPG" sceneMemberID="viewController">
+                <viewController id="f0J-Lu-h3y" customClass="Batalla" customModule="DungeonRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="quS-x2-OfV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,7 +164,7 @@
                                 <rect key="frame" x="318" y="577" width="41" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWz-Wy-HvD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWz-Wy-HvD">
                                 <rect key="frame" x="104" y="268" width="183" height="144"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -200,10 +198,10 @@
             </objects>
             <point key="canvasLocation" x="2621.5999999999999" y="-737.18140929535241"/>
         </scene>
-        <!--View Controller5-->
+        <!--Tienda-->
         <scene sceneID="AeI-0F-1Ky">
             <objects>
-                <viewController id="rTR-ll-v1D" customClass="ViewController5" customModule="DungeonRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rTR-ll-v1D" customClass="Tienda" customModule="DungeonRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vFs-Sf-hBr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,10 +276,10 @@
             </objects>
             <point key="canvasLocation" x="1637.5999999999999" y="843.32833583208401"/>
         </scene>
-        <!--View Controller2-->
+        <!--Menu-->
         <scene sceneID="vQc-vL-3eY">
             <objects>
-                <viewController id="6Ki-u3-bz3" customClass="ViewController2" customModule="DungeonRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Ki-u3-bz3" customClass="Menu" customModule="DungeonRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oV5-rK-6q9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -323,25 +321,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6e-jE-Jwk">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6e-jE-Jwk">
                                 <rect key="frame" x="122" y="321" width="136" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="lNR-E6-cZ3" kind="show" identifier="secueInventory" id="xgY-G6-16n"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3h-Bd-NiV">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3h-Bd-NiV">
                                 <rect key="frame" x="119" y="476" width="136" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="rTR-ll-v1D" kind="show" identifier="secueShop" id="6eS-xC-AKz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txe-Yz-cQe">
-                                <rect key="frame" x="119" y="127" width="136" height="117"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="AgB-HB-jMB" kind="show" identifier="secueDungeon" id="EjU-ey-085"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQ8-iA-YHG">
@@ -352,6 +343,13 @@
                                     <segue destination="0PM-5w-Ett" kind="show" id="CrS-VJ-wfl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txe-Yz-cQe">
+                                <rect key="frame" x="123" y="142" width="136" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="AgB-HB-jMB" kind="show" identifier="secueDungeon" id="EjU-ey-085"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tQN-R3-3cj"/>
@@ -359,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ehw-07-n2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="526" y="15"/>
+            <point key="canvasLocation" x="505" y="15"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cVI-0g-yqp">
@@ -655,11 +653,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wms-K8-kkP">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wms-K8-kkP">
                                 <rect key="frame" x="74" y="313" width="229" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="boton2:" destination="FeR-u9-KfF" eventType="touchUpInside" id="dVV-cZ-wP5"/>
+                                    <action selector="clickHero:" destination="0PM-5w-Ett" eventType="touchUpInside" id="P9N-3L-dEi"/>
                                     <segue destination="6Ki-u3-bz3" kind="show" identifier="secue3" id="Pik-8g-Uy4"/>
                                 </connections>
                             </button>
@@ -668,6 +667,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="boton1:" destination="FeR-u9-KfF" eventType="touchUpInside" id="gYf-wX-0zV"/>
+                                    <action selector="clickHero:" destination="0PM-5w-Ett" eventType="touchUpInside" id="DoU-7v-FET"/>
                                     <segue destination="6Ki-u3-bz3" kind="show" identifier="secue1" id="ghc-1c-QJy"/>
                                 </connections>
                             </button>
@@ -719,11 +719,12 @@
                                 <rect key="frame" x="273" y="488" width="26" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1l-bq-3B2">
-                                <rect key="frame" x="77" y="510" width="229" height="99"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1l-bq-3B2">
+                                <rect key="frame" x="82" y="482" width="229" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="boton3:" destination="FeR-u9-KfF" eventType="touchUpInside" id="qZj-ag-aKb"/>
+                                    <action selector="clickHero:" destination="0PM-5w-Ett" eventType="touchUpInside" id="76a-MC-yZr"/>
                                     <segue destination="6Ki-u3-bz3" kind="show" identifier="secue2" id="d8m-co-Tpm"/>
                                 </connections>
                             </button>
@@ -763,10 +764,10 @@
             </objects>
             <point key="canvasLocation" x="-279.19999999999999" y="14.842578710644679"/>
         </scene>
-        <!--View Controller3-->
+        <!--Inventario-->
         <scene sceneID="z3g-u1-87c">
             <objects>
-                <viewController id="lNR-E6-cZ3" customClass="ViewController3" customModule="DungeonRPG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lNR-E6-cZ3" customClass="Inventario" customModule="DungeonRPG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nTO-vA-YIU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -969,7 +970,6 @@
                         <viewLayoutGuide key="safeArea" id="3ZR-os-aut"/>
                     </view>
                     <connections>
-                        <outlet property="ImageHeroe" destination="41e-WS-ZFS" id="PyR-DO-KOa"/>
                         <outlet property="ataque" destination="pw7-V3-LaU" id="M9T-UI-37y"/>
                         <outlet property="boxAnillo" destination="Zje-AW-g8e" id="tNl-ag-bRf"/>
                         <outlet property="boxArma" destination="r3t-T0-Wbp" id="r6N-Mx-lmH"/>
@@ -983,9 +983,10 @@
                         <outlet property="corazon4" destination="MWl-55-axT" id="n5n-lZ-Ale"/>
                         <outlet property="defensa" destination="bdy-yy-Kvm" id="xzG-Hv-nnW"/>
                         <outlet property="experiencia" destination="wUP-Ce-jgC" id="es7-ho-1MS"/>
+                        <outlet property="imageHeroe" destination="41e-WS-ZFS" id="fd7-kF-RBr"/>
+                        <outlet property="labelHeroe" destination="XLm-dq-QEV" id="XjX-OE-xaD"/>
                         <outlet property="magia" destination="ZAN-b0-g03" id="ouo-Ja-c2y"/>
                         <outlet property="money" destination="KWj-Bn-TOt" id="Hgg-oR-9wb"/>
-                        <outlet property="nombreHeroe" destination="XLm-dq-QEV" id="Gj0-Hv-cGr"/>
                         <outlet property="suerte" destination="daL-ox-pBM" id="3LT-aA-hNC"/>
                     </connections>
                 </viewController>
@@ -1012,7 +1013,7 @@
         <image name="xp.png" width="56" height="57"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XcY-sN-jnG"/>
-        <segue reference="1T9-cP-TYY"/>
+        <segue reference="lJ8-HV-YVD"/>
+        <segue reference="EjU-ey-085"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -41,7 +41,9 @@ class ViewController3: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         mostrarCorazones(numerovidas : heroeInventory.getVida(),corazon1: corazon1,corazon2: corazon2,corazon3: corazon3,corazon4: corazon4)
+        let view:ViewController = ViewController()
+        
+         view.mostrarCorazones(numerovidas : heroeInventory.getVida(),corazon1: corazon1,corazon2: corazon2,corazon3: corazon3,corazon4: corazon4)
         
         
         if (heroeInventory.getNombre()=="Agro"){
@@ -72,9 +74,9 @@ class ViewController3: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "secueMenu" ) {
+      /*  if (segue.identifier == "secueMenu" ) {
             let segundaView = segue.destination as! ViewController2
             segundaView.heroeElegido = heroeInventory
-        }
+        }*/
     }
 }

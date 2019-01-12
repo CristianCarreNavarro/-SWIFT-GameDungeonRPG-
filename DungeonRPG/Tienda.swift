@@ -1,5 +1,5 @@
 //
-//  ViewController5.swift
+//  Tienda.swift
 //  DungeonRPG
 //
 //  Created by CristianK on 30/12/2018.
@@ -8,86 +8,55 @@
 import UIKit
 
 
-class ViewController5: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate  {
+
+var item : Item!
+var costeItem : Int = 0
+
+class Tienda: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate  {
     
-    var heroeCompras : Heroe!
-    var item : Item!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var labelMoney: UILabel!
     @IBOutlet weak var mensajeLabel: UILabel!
     @IBOutlet weak var buttonBuy: UIButton!
     
-    var costeItem : Int = 0
-    
-    
-    @IBAction func buttonBuy(_ sender: Any) {
-        
-        if(heroeCompras.getMonedas() < costeItem){
-            
-                 mostrarAlerta(title: "ERROR", message: "No tienes suficiente dinero!")
- 
-        }else{
-            
-    
-                
-        heroeCompras.setMonedas(valor:heroeCompras.getMonedas() - costeItem)
-        labelMoney.text = String (heroeCompras.getMonedas()) + " money"
-            let tipo = item.getTipo()
-            
-            switch(tipo){
-                
-            case "arma":
-                heroeCompras.getStuff().setArma(valor: item)
-                break
-            case "escudo":
-                heroeCompras.getStuff().setEscudo(valor: item)
-                break
-            case "casco":
-                    heroeCompras.getStuff().setCasco(valor: item)
-                break
-            case "botas":
-                    heroeCompras.getStuff().setBotas(valor: item)
-                break
-            case "armadura":
-                    heroeCompras.getStuff().setArmadura(valor: item)
-                break
-            case "anillo":
-                    heroeCompras.getStuff().setAnillo(valor: item)
-                break
-            default:
-                break
-            }
-            
-        }
-           mostrarAlerta(title: "REALIZADO", message: "Compra Satisfactoria!")
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        labelMoney.text = String (heroeELegido.getMonedas()) + " money"
+        labelMoney.textAlignment = .left
+        mensajeLabel.text = ""
         
     }
     
+    
+
     func tieneEseObjeto(heroe : Heroe, item : Item)-> Bool{
-       var loTiene : Bool = false
+        var loTiene : Bool = false
         let arma : Item = heroe.getStuff().getArma()
         let armadura : Item = heroe.getStuff().getArmadura()
-          let botas : Item = heroe.getStuff().getBotas()
-          let escudo : Item = heroe.getStuff().getEscudo()
-          let anillo : Item = heroe.getStuff().getAnillo()
-          let casco : Item = heroe.getStuff().getCasco()
+        let botas : Item = heroe.getStuff().getBotas()
+        let escudo : Item = heroe.getStuff().getEscudo()
+        let anillo : Item = heroe.getStuff().getAnillo()
+        let casco : Item = heroe.getStuff().getCasco()
         
         if(item === arma)||(item === botas)||(item === armadura)||(item === escudo)||(item === anillo)||(item === casco){
             loTiene = true
         }
-
+        
         return loTiene
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "secueMenu3" ) {
-            let segundaView = segue.destination as! ViewController2
-            heroeElegido = heroeCompras
-    }
-    }
+
     
- 
-        
+    
+
+    
+
+    
+    
+    
     func mostrarAlerta(title: String, message: String) {
         
         let alertaGuia = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -101,31 +70,64 @@ class ViewController5: UIViewController,UIPickerViewDelegate,UIPickerViewDataSou
         present(alertaGuia, animated: true, completion: nil)
         
     }
-   
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-         pickerView.delegate = self
-         pickerView.dataSource = self
-        labelMoney.text = String (heroeCompras.getMonedas()) + " money"
-        labelMoney.textAlignment = .left
-        mensajeLabel.text = ""
+
+    @IBAction func buttonBuy(_ sender: Any) {
         
+        if(heroeELegido.getMonedas() < costeItem){
+            
+            mostrarAlerta(title: "ERROR", message: "No tienes suficiente dinero!")
+            
+        }else{
+            
+            heroeELegido.setMonedas(valor:heroeELegido.getMonedas() - costeItem)
+            labelMoney.text = String (heroeELegido.getMonedas()) + " money"
+            let tipo = item.getTipo()
+            
+            switch(tipo){
+                
+            case "arma":
+                heroeELegido.getStuff().setArma(valor: item)
+                break
+            case "escudo":
+                heroeELegido.getStuff().setEscudo(valor: item)
+                break
+            case "casco":
+                heroeELegido.getStuff().setCasco(valor: item)
+                break
+            case "botas":
+                heroeELegido.getStuff().setBotas(valor: item)
+                break
+            case "armadura":
+                heroeELegido.getStuff().setArmadura(valor: item)
+                break
+            case "anillo":
+                heroeELegido.getStuff().setAnillo(valor: item)
+                break
+            default:
+                break
+            }
+            
+        }
+        mostrarAlerta(title: "REALIZADO", message: "Compra Satisfactoria!")
         
     }
     
 
+    //PICKERVIEW*******************************************************************************
+    
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return ViewController.arrayItems.count;
+        return arrayItems.count;
     }
     
-   
- 
+    
+    
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 100
@@ -135,7 +137,7 @@ class ViewController5: UIViewController,UIPickerViewDelegate,UIPickerViewDataSou
         
         let myView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         let myImageView = UIImageView(frame: CGRect(x: -95, y: 0, width: 100, height: 100))
-        item = ViewController.arrayItems[row] as? Item
+        item = arrayItems[row] as? Item
         myImageView.image = item.getImagen()
         myView.addSubview(myImageView)
         
@@ -180,25 +182,22 @@ class ViewController5: UIViewController,UIPickerViewDelegate,UIPickerViewDataSou
         
         
         
-        if(tieneEseObjeto(heroe: heroeCompras, item: item)){
+        if(tieneEseObjeto(heroe: heroeELegido, item: item)){
             buttonBuy.isHidden =  true
         }else{
-             buttonBuy.isHidden = false
+            buttonBuy.isHidden = false
         }
         
         
         return myView
-        
-       
-     
     }
     
- 
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: NSInteger, inComponent component: Int) {
-    item = ViewController.arrayItems[row] as? Item
-    costeItem = item.getCoste()
+        item = arrayItems[row] as? Item
+        costeItem = item.getCoste()
         
     }
     
-
+    
 }

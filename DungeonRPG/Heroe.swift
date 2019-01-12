@@ -6,7 +6,7 @@
 //  Copyright © 2018 DAM. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public class Heroe{
     private var nombre: String
@@ -78,5 +78,58 @@ public class Heroe{
         defensa = stuff.getArma().getDefensa()+stuff.getBotas().getDefensa()+stuff.getCasco().getDefensa()+stuff.getAnillo().getDefensa()+stuff.getEscudo().getDefensa()+stuff.getArmadura().getDefensa()
         return defensa
     }
+    
+    func mostrarHeroe(image : UIImageView,label : UILabel){
+        
+        if (self.getNombre()=="Agro"){
+            image.image = UIImage(named: "heroe1.png")
+            label.text = "Agro"
+        }else if(self.getNombre()=="Archer"){
+            image.image = UIImage(named: "heroe2.png")
+            label.text = "Archer"
+        }else if(self.getNombre()=="Thojen"){
+            image.image = UIImage(named: "heroe3.png")
+            label.text = "Thojen"
+        }
+    }
+    
+    func mostrarCorazones(numerovidas : Int , corazon1 : UIImageView, corazon2 : UIImageView, corazon3 : UIImageView, corazon4 : UIImageView){
+        
+        switch (numerovidas) {
+        case 4:
+            corazon1.isHidden = false
+            corazon2.isHidden = false
+            corazon3.isHidden = false
+            corazon4.isHidden = false
+            break
+        case 3:
+            corazon1.isHidden = false
+            corazon2.isHidden = false
+            corazon3.isHidden = false
+            corazon4.isHidden = true
+            break
+        case 2:
+            corazon1.isHidden = false
+            corazon2.isHidden = false
+            corazon3.isHidden = true
+            corazon4.isHidden = true
+            break
+        case 1:
+            corazon1.isHidden = false
+            corazon2.isHidden = true
+            corazon3.isHidden = true
+            corazon4.isHidden = true
+            break
+        case 0:
+            corazon1.isHidden = true
+            corazon2.isHidden = true
+            corazon3.isHidden = true
+            corazon4.isHidden = true
+            break
+        default:
+            print("error")
+        }
+    }
+    
 }
 

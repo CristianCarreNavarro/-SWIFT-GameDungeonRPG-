@@ -18,8 +18,12 @@
 		33E1358421AF1642007C1FCC /* Stuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1358321AF1642007C1FCC /* Stuff.swift */; };
 		33E1358621AF16E7007C1FCC /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1358521AF16E7007C1FCC /* Item.swift */; };
 		33E1358821AF1B63007C1FCC /* Monstruo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1358721AF1B63007C1FCC /* Monstruo.swift */; };
-		FA0C8BA021D573410095BD80 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C8B9F21D573410095BD80 /* ViewController2.swift */; };
-		FA1091CD21E105CB00386C23 /* ViewController6.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1091CC21E105CB00386C23 /* ViewController6.swift */; };
+		FA16D85D21E9579400D2C748 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA16D85C21E9579400D2C748 /* Menu.swift */; };
+		FA16D85F21E9582F00D2C748 /* Inventario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA16D85E21E9582F00D2C748 /* Inventario.swift */; };
+		FA16D86121E9588E00D2C748 /* ElegirMonstruo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA16D86021E9588E00D2C748 /* ElegirMonstruo.swift */; };
+		FA16D86321E958D500D2C748 /* Tienda.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA16D86221E958D500D2C748 /* Tienda.swift */; };
+		FA16D86521E9590F00D2C748 /* Batalla.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA16D86421E9590F00D2C748 /* Batalla.swift */; };
+		FA16D86821E9838500D2C748 /* rip.png in Resources */ = {isa = PBXBuildFile; fileRef = FA16D86721E9838500D2C748 /* rip.png */; };
 		FA25BB7921D65A29004D0584 /* heroe1.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25BB1121D65A26004D0584 /* heroe1.png */; };
 		FA25BB7A21D65A29004D0584 /* back_heroe.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25BB1221D65A26004D0584 /* back_heroe.png */; };
 		FA25BB7B21D65A29004D0584 /* heroe3.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25BB1321D65A26004D0584 /* heroe3.png */; };
@@ -118,9 +122,6 @@
 		FA25BBD821D65A29004D0584 /* magic.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25BB7621D65A28004D0584 /* magic.png */; };
 		FA25BBD921D65A29004D0584 /* preset_backpack.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25BB7721D65A28004D0584 /* preset_backpack.png */; };
 		FA25BBDA21D65A29004D0584 /* heart_middle.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25BB7821D65A28004D0584 /* heart_middle.png */; };
-		FA2FBEFB21D93B5A006FA84E /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FBEFA21D93B5A006FA84E /* ViewController3.swift */; };
-		FA2FBEFD21D9882C006FA84E /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FBEFC21D9882C006FA84E /* ViewController4.swift */; };
-		FA2FBEFF21D98A17006FA84E /* ViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FBEFE21D98A17006FA84E /* ViewController5.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,8 +183,12 @@
 		33E1358321AF1642007C1FCC /* Stuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stuff.swift; sourceTree = "<group>"; };
 		33E1358521AF16E7007C1FCC /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		33E1358721AF1B63007C1FCC /* Monstruo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monstruo.swift; sourceTree = "<group>"; };
-		FA0C8B9F21D573410095BD80 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
-		FA1091CC21E105CB00386C23 /* ViewController6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController6.swift; sourceTree = "<group>"; };
+		FA16D85C21E9579400D2C748 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		FA16D85E21E9582F00D2C748 /* Inventario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventario.swift; sourceTree = "<group>"; };
+		FA16D86021E9588E00D2C748 /* ElegirMonstruo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegirMonstruo.swift; sourceTree = "<group>"; };
+		FA16D86221E958D500D2C748 /* Tienda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tienda.swift; sourceTree = "<group>"; };
+		FA16D86421E9590F00D2C748 /* Batalla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Batalla.swift; sourceTree = "<group>"; };
+		FA16D86721E9838500D2C748 /* rip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rip.png; path = ../../../Downloads/rip.png; sourceTree = "<group>"; };
 		FA25BB1121D65A26004D0584 /* heroe1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heroe1.png; sourceTree = "<group>"; };
 		FA25BB1221D65A26004D0584 /* back_heroe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_heroe.png; sourceTree = "<group>"; };
 		FA25BB1321D65A26004D0584 /* heroe3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heroe3.png; sourceTree = "<group>"; };
@@ -282,10 +287,6 @@
 		FA25BB7621D65A28004D0584 /* magic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magic.png; sourceTree = "<group>"; };
 		FA25BB7721D65A28004D0584 /* preset_backpack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preset_backpack.png; sourceTree = "<group>"; };
 		FA25BB7821D65A28004D0584 /* heart_middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_middle.png; sourceTree = "<group>"; };
-		FA2CCBB621E807F0006D5FCE /* RIP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RIP.png; sourceTree = "<group>"; };
-		FA2FBEFA21D93B5A006FA84E /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
-		FA2FBEFC21D9882C006FA84E /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
-		FA2FBEFE21D98A17006FA84E /* ViewController5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController5.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,12 +339,14 @@
 			children = (
 				33E1352D21AF0F98007C1FCC /* AppDelegate.swift */,
 				33E1352F21AF0F98007C1FCC /* ViewController.swift */,
-				FA2FBEFA21D93B5A006FA84E /* ViewController3.swift */,
-				FA0C8B9F21D573410095BD80 /* ViewController2.swift */,
-				FA2FBEFC21D9882C006FA84E /* ViewController4.swift */,
-				FA2FBEFE21D98A17006FA84E /* ViewController5.swift */,
+				FA16D85C21E9579400D2C748 /* Menu.swift */,
+				FA16D85E21E9582F00D2C748 /* Inventario.swift */,
+				FA16D86021E9588E00D2C748 /* ElegirMonstruo.swift */,
+				FA16D86221E958D500D2C748 /* Tienda.swift */,
+				FA16D86421E9590F00D2C748 /* Batalla.swift */,
 				33E1353121AF0F98007C1FCC /* Main.storyboard */,
 				33E1353421AF0F9C007C1FCC /* Assets.xcassets */,
+				FA16D86721E9838500D2C748 /* rip.png */,
 				FA25BB1721D65A26004D0584 /* dice */,
 				FA25BB1021D65A26004D0584 /* heroes */,
 				FA25BB3521D65A28004D0584 /* items */,
@@ -358,7 +361,6 @@
 				33E1358321AF1642007C1FCC /* Stuff.swift */,
 				33E1358521AF16E7007C1FCC /* Item.swift */,
 				33E1358721AF1B63007C1FCC /* Monstruo.swift */,
-				FA1091CC21E105CB00386C23 /* ViewController6.swift */,
 			);
 			path = DungeonRPG;
 			sourceTree = "<group>";
@@ -422,7 +424,6 @@
 		FA25BB1021D65A26004D0584 /* heroes */ = {
 			isa = PBXGroup;
 			children = (
-				FA2CCBB621E807F0006D5FCE /* RIP.png */,
 				FA25BB1121D65A26004D0584 /* heroe1.png */,
 				FA25BB1221D65A26004D0584 /* back_heroe.png */,
 				FA25BB1321D65A26004D0584 /* heroe3.png */,
@@ -771,6 +772,7 @@
 				FA25BBCD21D65A29004D0584 /* backpack.png in Resources */,
 				FA25BBB021D65A29004D0584 /* arrow2.png in Resources */,
 				FA25BBD121D65A29004D0584 /* damage.png in Resources */,
+				FA16D86821E9838500D2C748 /* rip.png in Resources */,
 				FA25BBD921D65A29004D0584 /* preset_backpack.png in Resources */,
 				FA25BB9421D65A29004D0584 /* dice10.png in Resources */,
 				FA25BBB721D65A29004D0584 /* ring2.png in Resources */,
@@ -803,16 +805,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA1091CD21E105CB00386C23 /* ViewController6.swift in Sources */,
-				FA0C8BA021D573410095BD80 /* ViewController2.swift in Sources */,
+				FA16D86321E958D500D2C748 /* Tienda.swift in Sources */,
 				33E1358821AF1B63007C1FCC /* Monstruo.swift in Sources */,
-				FA2FBEFB21D93B5A006FA84E /* ViewController3.swift in Sources */,
+				FA16D86121E9588E00D2C748 /* ElegirMonstruo.swift in Sources */,
 				33E1358621AF16E7007C1FCC /* Item.swift in Sources */,
-				FA2FBEFF21D98A17006FA84E /* ViewController5.swift in Sources */,
-				FA2FBEFD21D9882C006FA84E /* ViewController4.swift in Sources */,
+				FA16D85D21E9579400D2C748 /* Menu.swift in Sources */,
 				33E1353021AF0F98007C1FCC /* ViewController.swift in Sources */,
 				33E1352E21AF0F98007C1FCC /* AppDelegate.swift in Sources */,
 				33E1358421AF1642007C1FCC /* Stuff.swift in Sources */,
+				FA16D86521E9590F00D2C748 /* Batalla.swift in Sources */,
+				FA16D85F21E9582F00D2C748 /* Inventario.swift in Sources */,
 				33E1358221AF12E8007C1FCC /* Heroe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

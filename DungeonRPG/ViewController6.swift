@@ -7,14 +7,16 @@
 //
 import UIKit
 
+var enemigoFight : Monstruo!
+
+var heroeFight : Heroe!
+
 
 class ViewController6: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate,UITextFieldDelegate  {
     
-    var enemigoFight : Monstruo!
-    var heroeFight : Heroe!
 
-       static var arrayDadosHeroe : Array<Any> = []
-       static var arrayDadosEnemigo : Array<Any> = []
+    static var arrayDadosHeroe:[String] = [String]()
+    static var arrayDadosEnemigo : [String] = [String]()
     
     @IBOutlet weak var mensajeLabel: UILabel!
     @IBOutlet weak var imagenEnemigo: UIImageView!
@@ -58,9 +60,13 @@ class ViewController6: UIViewController,UIPickerViewDataSource, UIPickerViewDele
         super.viewDidLoad()
      mensajeLabel.text = ""
         
-        mostrarCorazones(numerovidas : heroeFight.getVida(),corazon1: corazon1Heroe,corazon2: corazon2Heroe,corazon3: corazon3Heroe,corazon4: corazon4Heroe)
+        let view:ViewController = ViewController()
         
-         mostrarCorazones(numerovidas : enemigoFight.getVidaMonstruo(),corazon1: corazon1Enemigo,corazon2: corazon2Enemigo,corazon3: corazon3Enemigo,corazon4: corazon4Enemigo)
+        
+        
+        view.mostrarCorazones(numerovidas : heroeFight.getVida(),corazon1: corazon1Heroe,corazon2: corazon2Heroe,corazon3: corazon3Heroe,corazon4: corazon4Heroe)
+        
+         view.mostrarCorazones(numerovidas : enemigoFight.getVidaMonstruo(),corazon1: corazon1Enemigo,corazon2: corazon2Enemigo,corazon3: corazon3Enemigo,corazon4: corazon4Enemigo)
         
         imagenHeroe.image = UIImage(named: heroeFight.getImagen())
         imagenEnemigo.image = UIImage(named: enemigoFight.getImagen())
@@ -219,21 +225,21 @@ if(pickerView.tag == 2){
         
         }
         
+        let view:ViewController = ViewController()
         
+        view.mostrarCorazones(numerovidas : heroeFight.getVida(),corazon1: corazon1Heroe,corazon2: corazon2Heroe,corazon3: corazon3Heroe,corazon4: corazon4Heroe)
         
-        mostrarCorazones(numerovidas : heroeFight.getVida(),corazon1: corazon1Heroe,corazon2: corazon2Heroe,corazon3: corazon3Heroe,corazon4: corazon4Heroe)
-        
-        mostrarCorazones(numerovidas : enemigoFight.getVidaMonstruo(),corazon1: corazon1Enemigo,corazon2: corazon2Enemigo,corazon3: corazon3Enemigo,corazon4: corazon4Enemigo)
+        view.mostrarCorazones(numerovidas : enemigoFight.getVidaMonstruo(),corazon1: corazon1Enemigo,corazon2: corazon2Enemigo,corazon3: corazon3Enemigo,corazon4: corazon4Enemigo)
         
         if (heroeFight.getVida()==0){
             imagenHeroe.image = UIImage(named: "RIP.png")
             
         mostrarAlerta(title: "MUERTO", message: "No tienes suficiente vidas! Te han matado!")
      
+        //implementar el equals
+        //let index = ViewController.listaMonstruos.index(value(forKey: enemigoFight.getNombreMonstruo()))
             
-            //let index = ViewController.listaMonstruos.index(value(forKey: enemigoFight.getNombreMonstruo()))
-            
-           // ViewController.listaMonstruos.remove(at: index)
+        ViewController.listaMonstruos.remove(at: selected!)
            
         }
         if(enemigoFight.getVidaMonstruo()==0){
@@ -253,16 +259,20 @@ if(pickerView.tag == 2){
         
     }
     
-  
+    var  arrayCorazones :Array<UIImage> = []
     
     func perderCorazones(numerovidas : Int , corazon1 : UIImageView, corazon2 : UIImageView, corazon3 : UIImageView, corazon4 : UIImageView){
+       
         
-        var arrayCorazones = [UIImage(named: "heart.png"),UIImage(named: "heartEmpty.png")]
+        // arrayCorazones = [UIImage(named: "heart.png")!,UIImage(named: "heartEmpty.png")!]
+        
+         // animateLostcorazones(imageView: corazon4, images:[arrayCorazones[])
         
         switch (numerovidas) {
    
         case 3:
-         animateLostcorazones(imageView: corazon4, images:[arrayCorazones])!
+            
+          //  ViewController6.animate (withDuration: 2.0, delay: 0, opciones: [.repeat, .autoreverse], animaciones: {corazon4.opacity = 0},
             corazon4.isHidden = true
             break
         case 2:
@@ -288,16 +298,16 @@ if(pickerView.tag == 2){
         }
     }
     
-    func animateLostcorazones(imageView: UIImageView, images:[UIImage]){
+   /* func animateLostcorazones(imageView: UIImageView, images:[UIImage]){
         imageView.animationImages = images
         imageView.animationDuration = 1.0
         imageView.animationRepeatCount = 2
         imageView.startAnimating()
         
         
-    }
+    }*/
     
-    
+   
     
     
     
@@ -319,5 +329,20 @@ if(pickerView.tag == 2){
     
     
 }
-
-
+/*
+extension UIImage{
+    
+    func flash(){
+        let flash = CABasicAnimation(keyPath: "opacity")
+        flash.duration = 0.5
+        flash.fromValue = 1
+        flash.toValue = 0.1
+        flash.timingFunction = CAMediaTimingFunction(name:)
+        flash.autoreverses = true
+        flash.repeatCount = 3
+        
+        self.add(flash, forKey:nil)
+    }
+    
+ 
+}*/

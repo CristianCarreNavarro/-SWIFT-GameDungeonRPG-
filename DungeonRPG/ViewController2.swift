@@ -7,10 +7,11 @@
 //
 import UIKit
 
+var heroe2 : Heroe!
 
 class ViewController2: UIViewController {
     
-  var heroeElegido : Heroe!
+  
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "secueInventory" ) {

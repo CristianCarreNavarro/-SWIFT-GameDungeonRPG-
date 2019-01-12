@@ -8,32 +8,27 @@
 
 import UIKit
 
+
+var  arrayItems :Array<Any> = []
+var  arrayMonstruos:Array<Any> = []
+
  class ViewController: UIViewController {
 
     @IBOutlet weak var magiaAgro: UILabel!
-    
     @IBOutlet weak var luckyAgro: UILabel!
-    
     @IBOutlet weak var ataqueAgro: UILabel!
-    
     @IBOutlet weak var defensaAgro: UILabel!
     
 
     @IBOutlet weak var ataqueArcher: UILabel!
-    
     @IBOutlet weak var magiaArcher: UILabel!
-    
     @IBOutlet weak var defensaArcher: UILabel!
-    
     @IBOutlet weak var luckyArcher: UILabel!
     
     
     @IBOutlet weak var magiaThojen: UILabel!
-   
     @IBOutlet weak var luckyThojen: UILabel!
-    
     @IBOutlet weak var ataqueThojen: UILabel!
-    
     @IBOutlet weak var defensaThojen: UILabel!
     
     @IBOutlet weak var heart1Heroe1: UIImageView!
@@ -52,50 +47,17 @@ import UIKit
     @IBOutlet weak var heart4Heroe3: UIImageView!
     
     
-    static var  arrayItems :Array<Any> = []
-    
-    static var  arrayMonstruos:Array<Any> = []
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        ViewController.arrayItems = [espadaFuego,arco,cetroCristal,escudoRonyoso,ViewController.escudoBarbaSanta,escudoTipico,lataFrijoles,sombreroMago,sombreroBizantino,sombreroVikingo,ViewController.botasCuero,botasHierro,armaduraDragon,capaSucia,capaLimpia,armaduraExtranyoAgujero,anilloBoda,anilloPedrusco,anilloRojo]
 
-     
-        let stuff1 = heroe1.getStuff()
-        ataqueAgro.text = String (heroe1.conseguirAtaque(stuff : stuff1))
-        magiaAgro.text = String (heroe1.conseguirMagia(stuff : stuff1))
-        defensaAgro.text = String (heroe1.conseguirDefensa(stuff : stuff1))
-        luckyAgro.text = String (heroe1.conseguirSuerte(stuff : stuff1))
-        
-        let stuff2 = heroe2.getStuff()
-        ataqueArcher.text = String (heroe2.conseguirAtaque(stuff : stuff2))
-        magiaArcher.text = String (heroe2.conseguirMagia(stuff : stuff2))
-        defensaArcher.text = String (heroe2.conseguirDefensa(stuff : stuff2))
-        luckyArcher.text = String (heroe2.conseguirSuerte(stuff : stuff2))
-        
     
-        let stuff3 = heroe3.getStuff()
-        ataqueThojen.text = String (heroe3.conseguirAtaque(stuff : stuff3))
-        magiaThojen.text = String (heroe3.conseguirMagia(stuff : stuff3))
-        defensaThojen.text = String (heroe3.conseguirDefensa(stuff : stuff3))
-        luckyThojen.text = String (heroe3.conseguirSuerte(stuff : stuff3))
-      
-        mostrarCorazones(numerovidas: heroe1.getVida(),corazon1: heart1Heroe1,corazon2: heart2Heroe1,corazon3: heart3Heroe1,corazon4: heart4Heroe1)
-        mostrarCorazones(numerovidas: heroe2.getVida(),corazon1: heart1Heroe2,corazon2: heart2Heroe2,corazon3: heart3Heroe2,corazon4: heart4Heroe2)
-        mostrarCorazones(numerovidas: heroe3.getVida(),corazon1: heart1Heroe3,corazon2: heart2Heroe3,corazon3: heart3Heroe3,corazon4: heart4Heroe3)
-    }
-
-
-    static var listaMonstruos = [Monstruo(nombreMonstruo:"Dildok usadok", nivelMonstruo: 2, vidaMonstruo: 1, ataqueMonstruo: 10, defensaMonstruo: 45, premioMonstruo: 20, experienciaMonstruo: 50, imagen: "monster8.png"), Monstruo(nombreMonstruo:"Chicle pisado", nivelMonstruo: 3, vidaMonstruo: 1, ataqueMonstruo: 12, defensaMonstruo: 48, premioMonstruo: 20, experienciaMonstruo: 50, imagen: "monster9.png"),Monstruo(nombreMonstruo:"EsteroideMan", nivelMonstruo: 7, vidaMonstruo: 3, ataqueMonstruo: 80, defensaMonstruo: 200, premioMonstruo: 200, experienciaMonstruo: 200, imagen: "monster1.png"),Monstruo(nombreMonstruo:"Garrapata dorada", nivelMonstruo: 5, vidaMonstruo: 2, ataqueMonstruo: 36, defensaMonstruo: 73, premioMonstruo: 145, experienciaMonstruo: 500, imagen: "monster11.png"),Monstruo(nombreMonstruo:"Ratero dos dagas", nivelMonstruo: 6, vidaMonstruo: 3, ataqueMonstruo: 77, defensaMonstruo: 50, premioMonstruo: 127, experienciaMonstruo: 100, imagen: "monster6.png"),Monstruo(nombreMonstruo:"Manos arañiba", nivelMonstruo: 8, vidaMonstruo: 3, ataqueMonstruo: 85, defensaMonstruo: 63, premioMonstruo: 150, experienciaMonstruo: 200, imagen: "monster5.png"),Monstruo(nombreMonstruo:"Espadachin-chin", nivelMonstruo: 9, vidaMonstruo: 4, ataqueMonstruo: 115, defensaMonstruo: 107, premioMonstruo: 350, experienciaMonstruo: 200, imagen: "monster15.png"),Monstruo(nombreMonstruo:"Mala-Hierba", nivelMonstruo: 4, vidaMonstruo: 4, ataqueMonstruo: 5, defensaMonstruo: 107, premioMonstruo: 90, experienciaMonstruo: 100, imagen: "monster2.png") ]
+  //MONSTRUOS
+    static var listaMonstruos = [Monstruo(nombreMonstruo:"Dildok usadok", nivelMonstruo: 2, vidaMonstruo: 1, ataqueMonstruo: 10, defensaMonstruo: 45, premioMonstruo: 20, experienciaMonstruo: 50, imagen: "monster8.png"), Monstruo(nombreMonstruo:"Rana otraVez", nivelMonstruo: 3, vidaMonstruo: 1, ataqueMonstruo: 12, defensaMonstruo: 48, premioMonstruo: 20, experienciaMonstruo: 50, imagen: "monster9.png"),Monstruo(nombreMonstruo:"EsteroideMan", nivelMonstruo: 7, vidaMonstruo: 3, ataqueMonstruo: 80, defensaMonstruo: 200, premioMonstruo: 200, experienciaMonstruo: 200, imagen: "monster1.png"),Monstruo(nombreMonstruo:"Garrapata dorada", nivelMonstruo: 5, vidaMonstruo: 2, ataqueMonstruo: 36, defensaMonstruo: 73, premioMonstruo: 145, experienciaMonstruo: 500, imagen: "monster11.png"),Monstruo(nombreMonstruo:"Ratero dos dagas", nivelMonstruo: 6, vidaMonstruo: 3, ataqueMonstruo: 77, defensaMonstruo: 50, premioMonstruo: 127, experienciaMonstruo: 100, imagen: "monster6.png"),Monstruo(nombreMonstruo:"Manos arañiba", nivelMonstruo: 8, vidaMonstruo: 3, ataqueMonstruo: 85, defensaMonstruo: 63, premioMonstruo: 150, experienciaMonstruo: 200, imagen: "monster5.png"),Monstruo(nombreMonstruo:"Espadachin-chin", nivelMonstruo: 9, vidaMonstruo: 4, ataqueMonstruo: 115, defensaMonstruo: 107, premioMonstruo: 350, experienciaMonstruo: 200, imagen: "monster15.png"),Monstruo(nombreMonstruo:"Mala-Hierba", nivelMonstruo: 4, vidaMonstruo: 4, ataqueMonstruo: 5, defensaMonstruo: 107, premioMonstruo: 90, experienciaMonstruo: 100, imagen: "monster2.png") ]
 
 
    
     //HEROES
-    lazy var heroe1 = Heroe(nombre:"Agro", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff1, imagen: "heroe1.png", vida:4 )
-    lazy var heroe2 = Heroe(nombre:"Archer", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff2,imagen: "heroe2.png",vida:3 )
-    lazy var heroe3 = Heroe(nombre:"Thojen", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff3,imagen: "heroe3.png",vida:2 )
+    lazy var heroeAgro = Heroe(nombre:"Agro", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff1, imagen: "heroe1.png", vida:4 )
+    lazy var heroeArcher = Heroe(nombre:"Archer", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff2,imagen: "heroe2.png",vida:3 )
+    lazy var heroeThojen = Heroe(nombre:"Thojen", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff3,imagen: "heroe3.png",vida:2 )
     
    
     //ARMAS
@@ -133,66 +95,80 @@ import UIKit
     
     
     //STUFFS
-    lazy var stuff1 = Stuff(arma: espadaFuego, escudo: escudoRonyoso, casco: sombreroVikingo, botas: botasHierro, armadura: armaduraDragon, anillo: anilloBoda);
+    lazy var stuff1 = Stuff(arma: espadaFuego, escudo: escudoRonyoso, casco: sombreroVikingo, botas: botasHierro, armadura: armaduraDragon, anillo: anilloBoda)
     
-    lazy var stuff2 = Stuff(arma: arco, escudo: ViewController.escudoBarbaSanta, casco: lataFrijoles, botas: ViewController.botasCuero, armadura: capaSucia, anillo: anilloPedrusco);
+    lazy var stuff2 = Stuff(arma: arco, escudo: ViewController.escudoBarbaSanta, casco: lataFrijoles, botas: ViewController.botasCuero, armadura: capaSucia, anillo: anilloPedrusco)
     
-    lazy var stuff3 = Stuff(arma: cetroCristal, escudo: escudoTipico, casco: sombreroMago, botas: ViewController.botasCuero, armadura: capaLimpia, anillo: anilloRojo);
+    lazy var stuff3 = Stuff(arma: cetroCristal, escudo: escudoTipico, casco: sombreroMago, botas: ViewController.botasCuero, armadura: capaLimpia, anillo: anilloRojo)
     
     
     //FUNCIONES
+ 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        arrayItems = [espadaFuego,arco,cetroCristal,escudoRonyoso,ViewController.escudoBarbaSanta,escudoTipico,lataFrijoles,sombreroMago,sombreroBizantino,sombreroVikingo,ViewController.botasCuero,botasHierro,armaduraDragon,capaSucia,capaLimpia,armaduraExtranyoAgujero,anilloBoda,anilloPedrusco,anilloRojo]
+        
+        
+        let stuff1 = heroeAgro.getStuff()
+        ataqueAgro.text = String (heroeAgro.conseguirAtaque(stuff : stuff1))
+        magiaAgro.text = String (heroeAgro.conseguirMagia(stuff : stuff1))
+        defensaAgro.text = String (heroeAgro.conseguirDefensa(stuff : stuff1))
+        luckyAgro.text = String (heroeAgro.conseguirSuerte(stuff : stuff1))
+        
+        let stuff2 = heroeArcher.getStuff()
+        ataqueArcher.text = String (heroeArcher.conseguirAtaque(stuff : stuff2))
+        magiaArcher.text = String (heroeArcher.conseguirMagia(stuff : stuff2))
+        defensaArcher.text = String (heroeArcher.conseguirDefensa(stuff : stuff2))
+        luckyArcher.text = String (heroeArcher.conseguirSuerte(stuff : stuff2))
+        
+        
+        let stuff3 = heroeThojen.getStuff()
+        ataqueThojen.text = String (heroeThojen.conseguirAtaque(stuff : stuff3))
+        magiaThojen.text = String (heroeThojen.conseguirMagia(stuff : stuff3))
+        defensaThojen.text = String (heroeThojen.conseguirDefensa(stuff : stuff3))
+        luckyThojen.text = String (heroeThojen.conseguirSuerte(stuff : stuff3))
+        
+        heroeAgro.mostrarCorazones(numerovidas: heroeAgro.getVida(),corazon1: heart1Heroe1,corazon2: heart2Heroe1,corazon3: heart3Heroe1,corazon4: heart4Heroe1)
+        heroeArcher.mostrarCorazones(numerovidas: heroeArcher.getVida(),corazon1: heart1Heroe2,corazon2: heart2Heroe2,corazon3: heart3Heroe2,corazon4: heart4Heroe2)
+        heroeThojen.mostrarCorazones(numerovidas: heroeThojen.getVida(),corazon1: heart1Heroe3,corazon2: heart2Heroe3,corazon3: heart3Heroe3,corazon4: heart4Heroe3)
+    }
+    
+    
+    @IBAction func clickHero(_ sender: UIButton) {
+        
+        switch(sender.tag) {
+        case 0:
+            heroeELegido = heroeAgro
+            break
+        case 1:
+            heroeELegido = heroeArcher
+            break
+        case 2:
+            heroeELegido = heroeThojen
+            break
+        default:
+            print("error")
+        }
+        
+    }
     
   
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let segundoView = segue.destination as! ViewController2
-           if (segue.identifier == "secue1" ) {
-             segundoView.heroeElegido = heroe1
-           }else if(segue.identifier == "secue3" ) {
-            segundoView.heroeElegido = heroe2
-           }else if(segue.identifier == "secue2" ) {
-            segundoView.heroeElegido = heroe3
-        }
-    }
-}
 
 
-
-func mostrarCorazones(numerovidas : Int , corazon1 : UIImageView, corazon2 : UIImageView, corazon3 : UIImageView, corazon4 : UIImageView){
     
-    switch (numerovidas) {
-    case 4:
-        corazon1.isHidden = false
-           corazon2.isHidden = false
-           corazon3.isHidden = false
-           corazon4.isHidden = false
-        break
-    case 3:
-        corazon1.isHidden = false
-        corazon2.isHidden = false
-        corazon3.isHidden = false
-        corazon4.isHidden = true
-        break
-    case 2:
-        corazon1.isHidden = false
-        corazon2.isHidden = false
-        corazon3.isHidden = true
-        corazon4.isHidden = true
-        break
-    case 1:
-        corazon1.isHidden = false
-        corazon2.isHidden = true
-        corazon3.isHidden = true
-        corazon4.isHidden = true
-        break
-    case 0:
-        corazon1.isHidden = true
-        corazon2.isHidden = true
-        corazon3.isHidden = true
-        corazon4.isHidden = true
-        break
-    default:
-        break
-    }
+    
+
+    
+    /*
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     /*  let segundoView = segue.destination as! ViewController2
+     if (segue.identifier == "secue1" ) {
+     segundoView.heroeElegido = heroe1
+     }else if(segue.identifier == "secue3" ) {
+     segundoView.heroeElegido = heroe2
+     }else if(segue.identifier == "secue2" ) {
+     segundoView.heroeElegido = heroe3
+     }*/
+     }*/
 }
