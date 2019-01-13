@@ -107,17 +107,7 @@ var muertosMonstruos : Bool = false
     
     //FUNCIONES
  
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       
-        if(muertosMonstruos==false){
-        iniciarMonstruos()
-        }
-        
-        
-        arrayItems = [espadaFuego,arco,cetroCristal,escudoRonyoso,escudoBarbaSanta,escudoTipico,lataFrijoles,sombreroMago,sombreroBizantino,sombreroVikingo,botasCuero,botasHierro,armaduraDragon,capaSucia,capaLimpia,armaduraExtranyoAgujero,anilloBoda,anilloPedrusco,anilloRojo]
-        
-        
+    func crearHeroes(){
         
         let stuff1 = heroeAgro.getStuff()
         ataqueAgro.text = String (heroeAgro.conseguirAtaque(stuff : stuff1))
@@ -141,6 +131,53 @@ var muertosMonstruos : Bool = false
         heroeAgro.mostrarCorazones(numerovidas: heroeAgro.getVida(),corazon1: heart1Heroe1,corazon2: heart2Heroe1,corazon3: heart3Heroe1,corazon4: heart4Heroe1)
         heroeArcher.mostrarCorazones(numerovidas: heroeArcher.getVida(),corazon1: heart1Heroe2,corazon2: heart2Heroe2,corazon3: heart3Heroe2,corazon4: heart4Heroe2)
         heroeThojen.mostrarCorazones(numerovidas: heroeThojen.getVida(),corazon1: heart1Heroe3,corazon2: heart2Heroe3,corazon3: heart3Heroe3,corazon4: heart4Heroe3)
+    }
+    
+    
+    func retornarHeroe()-> Bool{
+        var yaExiste : Bool = false
+        if(heroeELegido != nil){
+            switch(heroeELegido.getNombre()){
+            case "Agro":
+                heroeAgro=heroeELegido
+                yaExiste = true
+                crearHeroes()
+                break
+            case "Archer":
+                heroeArcher=heroeELegido
+                 yaExiste = true
+                crearHeroes()
+                break
+            case "Thojen":
+                heroeThojen=heroeELegido
+                 yaExiste = true
+                crearHeroes()
+                break
+                
+            default :
+                
+                print ("error")
+            }
+            
+        }
+        return yaExiste
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if(retornarHeroe()==false){
+        crearHeroes()
+        }
+        if(muertosMonstruos==false){
+        iniciarMonstruos()
+        }
+     
+        
+        arrayItems = [espadaFuego,arco,cetroCristal,escudoRonyoso,escudoBarbaSanta,escudoTipico,lataFrijoles,sombreroMago,sombreroBizantino,sombreroVikingo,botasCuero,botasHierro,armaduraDragon,capaSucia,capaLimpia,armaduraExtranyoAgujero,anilloBoda,anilloPedrusco,anilloRojo]
+        
+        
+        
+     
     }
     
     
