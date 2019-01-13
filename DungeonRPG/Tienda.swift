@@ -160,7 +160,7 @@ class Tienda: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITex
         
         let myView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         let myImageView = UIImageView(frame: CGRect(x: -95, y: 0, width: 100, height: 100))
-        item = (arrayItems[row] as! Item)
+        item = (arrayItems[row] )
         print ("item SELECCIONADO :",item.getAtaque())
         myImageView.image = item.getImagen()
         myView.addSubview(myImageView)

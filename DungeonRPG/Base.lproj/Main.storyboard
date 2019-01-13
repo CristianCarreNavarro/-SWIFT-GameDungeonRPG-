@@ -165,7 +165,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWz-Wy-HvD">
-                                <rect key="frame" x="104" y="268" width="183" height="144"/>
+                                <rect key="frame" x="102" y="280" width="183" height="144"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1014,6 +1014,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XcY-sN-jnG"/>
-        <segue reference="EjU-ey-085"/>
+        <segue reference="1T9-cP-TYY"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,6 +11,8 @@ import UIKit
 
 var  arrayItems : Array<Item> = []
 var  listaMonstruos : Array<Monstruo> = []
+var muertosHeroes : Bool = false
+var muertosMonstruos : Bool = false
 
  class ViewController: UIViewController {
 
@@ -59,6 +61,8 @@ var  listaMonstruos : Array<Monstruo> = []
     lazy var heroeThojen = Heroe(nombre:"Thojen", nivel: 0, experiencia: 0, monedas: 100, stuff: stuff3,imagen: "heroe3.png",vida:2 )
     
    
+    
+   
     //ARMAS
     let espadaFuego = Item(ataque: 1, defensa: 24, magia: 06, suerte: 2, imagen: UIImage(named: "sword2.png")!, tipo: "arma",coste: 100)
     let arco = Item(ataque: 2, defensa: 12, magia: 26, suerte: 22, imagen: UIImage(named: "arrow3.png")!, tipo: "arma",coste: 100)
@@ -105,8 +109,14 @@ var  listaMonstruos : Array<Monstruo> = []
  
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        if(muertosMonstruos==false){
         iniciarMonstruos()
+        }
+        
+        
         arrayItems = [espadaFuego,arco,cetroCristal,escudoRonyoso,escudoBarbaSanta,escudoTipico,lataFrijoles,sombreroMago,sombreroBizantino,sombreroVikingo,botasCuero,botasHierro,armaduraDragon,capaSucia,capaLimpia,armaduraExtranyoAgujero,anilloBoda,anilloPedrusco,anilloRojo]
+        
         
         
         let stuff1 = heroeAgro.getStuff()
@@ -138,6 +148,7 @@ var  listaMonstruos : Array<Monstruo> = []
         
         switch(sender.tag) {
         case 0:
+            
             heroeELegido = heroeAgro
             break
         case 1:
@@ -163,15 +174,5 @@ var  listaMonstruos : Array<Monstruo> = []
     
 
     
-    /*
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     /*  let segundoView = segue.destination as! ViewController2
-     if (segue.identifier == "secue1" ) {
-     segundoView.heroeElegido = heroe1
-     }else if(segue.identifier == "secue3" ) {
-     segundoView.heroeElegido = heroe2
-     }else if(segue.identifier == "secue2" ) {
-     segundoView.heroeElegido = heroe3
-     }*/
-     }*/
+  
 }

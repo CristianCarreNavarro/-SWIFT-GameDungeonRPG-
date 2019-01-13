@@ -15,6 +15,7 @@ public class Monstruo{
     private var vidaMonstruo: Int
     private var ataqueMonstruo:Int
     private var defensaMonstruo:Int
+    
     private var premioMonstruo:Int
     private var experienciaMonstruo:Int
     private var imagen: String

@@ -13,13 +13,14 @@ var ataqueHeroe: Int = 0
 
 var arrayDadosEnemigo  : Array <Any> = []
 var arrayDadosHeroe  : Array <Any> = []
-
-var recompensa : Bool = false
+var  arrayCorazones :Array<UIImage> = []
+var numeroSegunAtaque : Int = 0
+var numeroComponentesHeroe : Int = 0
+var numeroComponentesMonstruo : Int = 0
 
 class Batalla: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate,UITextFieldDelegate  {
 
-    static var arrayDadosHeroe:[String] = [String]()
-    static var arrayDadosEnemigo : [String] = [String]()
+   
 
     @IBOutlet weak var mensajeLabel: UILabel!
     @IBOutlet weak var imagenEnemigo: UIImageView!
@@ -49,8 +50,6 @@ class Batalla: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate,UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mensajeLabel.text = ""
-        
         heroeELegido.mostrarCorazones(numerovidas : heroeELegido.getVida(),corazon1: corazon1Heroe,corazon2: corazon2Heroe,corazon3: corazon3Heroe,corazon4: corazon4Heroe)
         
         heroeELegido.mostrarCorazones(numerovidas : monstruoElegirMonstruo.getVidaMonstruo(),corazon1: corazon1Enemigo,corazon2: corazon2Enemigo,corazon3: corazon3Enemigo,corazon4: corazon4Enemigo)
@@ -58,8 +57,8 @@ class Batalla: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate,UIT
         imagenHeroe.image = UIImage(named: heroeELegido.getImagen())
         imagenEnemigo.image = UIImage(named: monstruoElegirMonstruo.getImagen())
         
-        Batalla.arrayDadosEnemigo = ["dice1U.png","dice2U.png","dice3U.png","dice4U.png","dice5U.png","dice6U.png","dice7U.png","dice8U.png","dice9U.png","dice10U.png","dice11U.png","dice12U.png"]
-        Batalla.arrayDadosHeroe = ["dice1.png","dice2.png","dice3.png","dice4.png","dice5.png","dice6.png","dice7.png","dice8.png","dice9.png","dice10.png","dice11.png","dice12.png"]
+        arrayDadosEnemigo = ["dice1U.png","dice2U.png","dice3U.png","dice4U.png","dice5U.png","dice6U.png","dice7U.png","dice8U.png","dice9U.png","dice10U.png","dice11U.png","dice12U.png"]
+        arrayDadosHeroe = ["dice1.png","dice2.png","dice3.png","dice4.png","dice5.png","dice6.png","dice7.png","dice8.png","dice9.png","dice10.png","dice11.png","dice12.png"]
         
         DadosMonstruo.delegate = self
         DadosMonstruo.dataSource = self
@@ -69,9 +68,22 @@ class Batalla: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate,UIT
         DadosHeroe.tag = 2
         buttonAttack.layer.cornerRadius = 10
         
+        if( estabadeParranda()){
+              mostrarAlerta(title: "MUERTO", message: "Los muertos no Pelean!")
+        }
     }
     
-    
+    func estabadeParranda()-> Bool{
+        var muerto : Bool = false
+        if (heroeELegido.getVida()==0){
+            buttonAttack.isHidden = true
+            imagenHeroe.image = UIImage(named: "rip.png")
+          
+            muerto = true
+
+        }
+       return muerto
+    }
     
     func mostrarAlerta(title: String, message: String) {
         
@@ -86,68 +98,153 @@ class Batalla: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate,UIT
         present(alertaGuia, animated: true, completion: nil)
         
     }
+  
+  
+    func SaberAtaqueHeroe(heroe : Heroe)-> Int {
+        let ataque = heroe.conseguirAtaque(stuff: heroe.getStuff())
+         let defensa = heroe.conseguirDefensa(stuff: heroe.getStuff())
+         let magia = heroe.conseguirMagia(stuff: heroe.getStuff())
+         let lucky = heroe.conseguirSuerte(stuff: heroe.getStuff())
+        
+    let ataqueTotal = ataque + defensa + magia + lucky / 4
+        
+        if (ataqueTotal <= 10 ){
+            numeroSegunAtaque = 1
+        }else if(ataqueTotal > 10  &&  ataqueTotal <= 25  ){
+            numeroSegunAtaque = 2
+        }else{
+            numeroSegunAtaque = 3
+        }
+    return numeroSegunAtaque
+    }
     
   
-
+func SaberAtaqueMonstruo(monstruo : Monstruo)-> Int {
     
-  
+   let nivelMonstruo = monstruo.getNivelMonstruo()
+        
+        if (nivelMonstruo <=  3){
+            numeroSegunAtaque = 1
+        }else if(nivelMonstruo > 3  &&  nivelMonstruo <= 6  ){
+            numeroSegunAtaque = 2
+        }else{
+            numeroSegunAtaque = 3
+        }
+        return numeroSegunAtaque
+    }
     
     
     
     
-    
+    //PICKERVIEW*******************************************************************
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 3
+          if(pickerView.tag == 2){
+           numeroSegunAtaque = SaberAtaqueHeroe(heroe: heroeELegido)
+        
+        }
+        if(pickerView.tag == 1){
+            numeroSegunAtaque = SaberAtaqueMonstruo(monstruo: monstruoElegirMonstruo)
+            
+        }
+        return numeroSegunAtaque
     }
     
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return Batalla.arrayDadosEnemigo.count
+        return arrayDadosEnemigo.count
     }
     
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
-        let myView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        //MEJOR CON UN FOR PERO NO QUIERO LIARLA
         
+        let myView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+      
         if(pickerView.tag == 1){
+          numeroComponentesMonstruo = pickerView.numberOfComponents
             
+            if(numeroComponentesMonstruo==3){
+           
             if(component==0){
                 let myImageView = UIImageView(frame: CGRect(x: 14, y: 22, width: 60, height: 57))
-                myImageView.image = UIImage(named:Batalla.arrayDadosEnemigo[row] )
+                myImageView.image = UIImage(named:arrayDadosEnemigo[row] as! String)
                 myView.addSubview(myImageView)
             }
             if(component==1){
                 let myImageView = UIImageView(frame: CGRect(x: 25, y: 22, width: 60, height: 57))
-                myImageView.image = UIImage(named:Batalla.arrayDadosEnemigo[row] )
+                myImageView.image = UIImage(named:arrayDadosEnemigo[row] as! String )
                 myView.addSubview(myImageView)
             }
             if(component==2){
                 let myImageView = UIImageView(frame: CGRect(x: 32, y: 22, width: 60, height: 57))
-                myImageView.image = UIImage(named:Batalla.arrayDadosEnemigo[row] )
+                myImageView.image = UIImage(named:arrayDadosEnemigo[row] as! String )
                 myView.addSubview(myImageView)
             }
+                
+            }else if(numeroComponentesMonstruo==2){
+                
+                if(component==0){
+                    let myImageView = UIImageView(frame: CGRect(x: 14, y: 22, width: 60, height: 57))
+                    myImageView.image = UIImage(named:arrayDadosEnemigo[row] as! String)
+                    myView.addSubview(myImageView)
+                }
+                if(component==1){
+                    let myImageView = UIImageView(frame: CGRect(x: 25, y: 22, width: 60, height: 57))
+                    myImageView.image = UIImage(named:arrayDadosEnemigo[row] as! String )
+                    myView.addSubview(myImageView)
+                }
+            }else{
+                    if(component==0){
+                        let myImageView = UIImageView(frame: CGRect(x: 14, y: 22, width: 60, height: 57))
+                        myImageView.image = UIImage(named:arrayDadosEnemigo[row] as! String)
+                        myView.addSubview(myImageView)
+                    }
+                    
+                }
             
         }
         
         if(pickerView.tag == 2){
             
+        numeroComponentesHeroe = pickerView.numberOfComponents
+            
+        if(numeroComponentesHeroe==3){
+            
             if(component==0){
                 let myImageView = UIImageView(frame: CGRect(x: 14, y: 22, width: 60, height: 57))
-                myImageView.image = UIImage(named:Batalla.arrayDadosHeroe[row] )
+                myImageView.image = UIImage(named:arrayDadosHeroe[row] as! String )
                 myView.addSubview(myImageView)
             }
             if(component==1){
                 let myImageView = UIImageView(frame: CGRect(x: 25, y: 22, width: 60, height: 57))
-                myImageView.image = UIImage(named:Batalla.arrayDadosHeroe[row] )
+                myImageView.image = UIImage(named:arrayDadosHeroe[row] as! String )
                 myView.addSubview(myImageView)
             }
             if(component==2){
                 let myImageView = UIImageView(frame: CGRect(x: 32, y: 22, width: 60, height: 57))
-                myImageView.image = UIImage(named:Batalla.arrayDadosHeroe[row] )
+                myImageView.image = UIImage(named:arrayDadosHeroe[row] as! String )
                 myView.addSubview(myImageView)
             }
+        }else if(numeroComponentesHeroe==2){
+                if(component==0){
+                    let myImageView = UIImageView(frame: CGRect(x: 14, y: 22, width: 60, height: 57))
+                    myImageView.image = UIImage(named:arrayDadosHeroe[row] as! String )
+                    myView.addSubview(myImageView)
+                }
+                if(component==1){
+                    let myImageView = UIImageView(frame: CGRect(x: 25, y: 22, width: 60, height: 57))
+                    myImageView.image = UIImage(named:arrayDadosHeroe[row] as! String )
+                    myView.addSubview(myImageView)
+                }
+        }else{
+                    if(component==0){
+                        let myImageView = UIImageView(frame: CGRect(x: 14, y: 22, width: 60, height: 57))
+                        myImageView.image = UIImage(named:arrayDadosHeroe[row] as! String )
+                        myView.addSubview(myImageView)
+                    }
+                }
             
         }
         return myView
@@ -164,8 +261,8 @@ class Batalla: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate,UIT
     
     @IBAction func funtionAttack(_ sender: Any) {
         
-        animateFight(num:Batalla.arrayDadosEnemigo.count)
-        animateFight(num:Batalla.arrayDadosHeroe.count)
+        animateFight(num:arrayDadosEnemigo.count)
+        animateFight(num:arrayDadosHeroe.count)
         
         comprobarSumaDados(atakEnemigo : ataqueEnemigo, atakHeroe : ataqueHeroe ,heroe : heroeELegido, monstruo : monstruoElegirMonstruo )
     }
@@ -186,34 +283,43 @@ class Batalla: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate,UIT
         golpeEnemigo.text = "   golpe: " + String (ataqueEnemigo)
         golpeHeroe.text = "   golpe: " + String (ataqueHeroe)
         
+      /*
+        for index in 0...numeroComponentesMonstruo {
+            
+            DadosMonstruo.selectRow(randomNumber1-1, inComponent: index, animated: true)
+            
+            
+        }*/
+        if (numeroComponentesMonstruo==3){
         DadosMonstruo.selectRow(randomNumber1-1, inComponent: 0, animated: true)
         DadosMonstruo.selectRow(randomNumber2-1, inComponent: 1, animated: true)
         DadosMonstruo.selectRow(randomNumber3-1, inComponent: 2, animated: true)
-        
-        
-        DadosHeroe.selectRow(randomNumber4-1, inComponent: 0, animated: true)
-        DadosHeroe.selectRow(randomNumber5-1, inComponent: 1, animated: true)
-        DadosHeroe.selectRow(randomNumber6-1, inComponent: 2, animated: true)
-        
-        print("****************************************")
-        print ("num1:" + String (randomNumber1))
-        print ("num2:" + String (randomNumber2))
-        print ("num3:" + String (randomNumber3))
+        }else if(numeroComponentesHeroe==2){
+            DadosMonstruo.selectRow(randomNumber1-1, inComponent: 0, animated: true)
+            DadosMonstruo.selectRow(randomNumber2-1, inComponent: 1, animated: true)
+        }else{
+            DadosMonstruo.selectRow(randomNumber1-1, inComponent: 0, animated: true)
+        }
+         /*
+        for index in 0...numeroComponentesHeroe {
+            
+            DadosHeroe.selectRow(randomNumber1-1, inComponent: index, animated: true)
+            
+            
+        }*/
 
-        print("               ")
+        if (numeroComponentesHeroe==3){
+            DadosHeroe.selectRow(randomNumber1-1, inComponent: 0, animated: true)
+            DadosHeroe.selectRow(randomNumber2-1, inComponent: 1, animated: true)
+            DadosHeroe.selectRow(randomNumber3-1, inComponent: 2, animated: true)
+        }else if(numeroComponentesHeroe==2){
+            DadosHeroe.selectRow(randomNumber1-1, inComponent: 0, animated: true)
+            DadosHeroe.selectRow(randomNumber2-1, inComponent: 1, animated: true)
+        }else{
+            DadosHeroe.selectRow(randomNumber1-1, inComponent: 0, animated: true)
+        }
         
-        print ("num4:" + String (randomNumber4))
-        print ("num5:" + String (randomNumber5))
-        print ("num6:" + String (randomNumber6))
-   
-        
-        
-        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-        }, completion: { (finished) in
-            UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
-            }, completion: nil)
-            /*    UIView.animate(withDuration: 1, animations: { self.DadosMonstruo.backgroundColor = .red}, completion: nil)*/
-        })
+       
         
     }
     
@@ -229,68 +335,69 @@ class Batalla: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate,UIT
             monstruo.setVida(valor: monstruo.getVidaMonstruo()-1)
             
         }
-        
-     
-        
+ 
         heroeELegido.mostrarCorazones(numerovidas : heroeELegido.getVida(),corazon1: corazon1Heroe,corazon2: corazon2Heroe,corazon3: corazon3Heroe,corazon4: corazon4Heroe)
         
         heroeELegido.mostrarCorazones(numerovidas : monstruoElegirMonstruo.getVidaMonstruo(),corazon1: corazon1Enemigo,corazon2: corazon2Enemigo,corazon3: corazon3Enemigo,corazon4: corazon4Enemigo)
         
         if (heroeELegido.getVida()==0){
+          
+            
             
             imagenHeroe.image = UIImage(named: "rip.png")
             
             mostrarAlerta(title: "MUERTO", message: "No tienes suficiente vidas! Te han matado!")
      
-           buttonAttack.isHidden = true
+            buttonAttack.isHidden = true
             
+        
+           
             
             
         }
+        
         if(monstruoElegirMonstruo.getVidaMonstruo()==0){
             
-            recompensa = true
+            muertosMonstruos = true
+            
+            if(listaMonstruos.isEmpty){
+                   mostrarAlerta(title: "FELICITACIONS", message: "Felicidades Has Ganado la AL DUNGEONS DRAGON!!SIGUIENTE PRACTICA!!")
+            }
+          
             imagenEnemigo.image = UIImage(named: "rip.png")
             
-            mostrarAlerta(title: "KILL HIM", message: "Felicidades Has Ganado la Batalla!!")
+            mostrarAlerta(title: "KILL HIM", message: "Felicidades Has Ganado la Batalla!! Obtienes su dinero y experiencia!")
             
-            heroeELegido.setMonedas(valor: heroeELegido.getMonedas() + monstruoElegirMonstruo.getPremioMonstruo())
-         
-            
-            if  let index = listaMonstruos.index(of: monstruoElegirMonstruo){
-       
-            
-         //  let index = listaMonstruos.index(NSObject.value(forKey:monstruoElegirMonstruo))
-            listaMonstruos.remove(at: index)
-        }
-            
+            mensajeLabel.text = ""
+
+            listaMonstruos.remove(at: indexMonstruo!)
             buttonAttack.isHidden = true
+            
+            
         }
         
-        if(recompensa){
-            heroeELegido.setExperiencia(valor: heroeELegido.getExperiencia() + monstruoElegirMonstruo.getExperienciaMonstruo())
-            mostrarAlerta(title: "RECOMPENSA", message: "Obtienes su dinero y experiencia!")
-            recompensa = false
+        if(buttonAttack.isHidden){
+        recompensa()
         }
-        
-      
+        }
+    
+    
+    
+    func recompensa(){
+        heroeELegido.setMonedas(valor: heroeELegido.getMonedas() + monstruoElegirMonstruo.getPremioMonstruo())
+        heroeELegido.setExperiencia(valor: heroeELegido.getExperiencia() + monstruoElegirMonstruo.getExperienciaMonstruo())
+       
         
     }
     
-    var  arrayCorazones :Array<UIImage> = []
+    
+    
     
     func perderCorazones(numerovidas : Int , corazon1 : UIImageView, corazon2 : UIImageView, corazon3 : UIImageView, corazon4 : UIImageView){
-        
-        
-        // arrayCorazones = [UIImage(named: "heart.png")!,UIImage(named: "heartEmpty.png")!]
-        
-        // animateLostcorazones(imageView: corazon4, images:[arrayCorazones[])
         
         switch (numerovidas) {
             
         case 3:
-            
-            //  ViewController6.animate (withDuration: 2.0, delay: 0, opciones: [.repeat, .autoreverse], animaciones: {corazon4.opacity = 0},
             corazon4.isHidden = true
             break
         case 2:
@@ -316,14 +423,15 @@ class Batalla: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate,UIT
         }
     }
     
-    /* func animateLostcorazones(imageView: UIImageView, images:[UIImage]){
-     imageView.animationImages = images
-     imageView.animationDuration = 1.0
-     imageView.animationRepeatCount = 2
-     imageView.startAnimating()
-     
-     
-     }*/
+    
+    
+    }
+
+
+
+
+    
+
     
     
     
@@ -346,7 +454,7 @@ class Batalla: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate,UIT
     
     
     
-}
+
 /*
  extension UIImage{
  
