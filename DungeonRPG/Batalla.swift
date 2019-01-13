@@ -167,7 +167,7 @@ class Batalla: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate,UIT
         animateFight(num:Batalla.arrayDadosEnemigo.count)
         animateFight(num:Batalla.arrayDadosHeroe.count)
         
-        ataque(atakEnemigo : ataqueEnemigo, atakHeroe : ataqueHeroe ,heroe : heroeELegido, monstruo : monstruoElegirMonstruo )
+        comprobarSumaDados(atakEnemigo : ataqueEnemigo, atakHeroe : ataqueHeroe ,heroe : heroeELegido, monstruo : monstruoElegirMonstruo )
     }
     
     
@@ -186,23 +186,26 @@ class Batalla: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate,UIT
         golpeEnemigo.text = "   golpe: " + String (ataqueEnemigo)
         golpeHeroe.text = "   golpe: " + String (ataqueHeroe)
         
-        DadosMonstruo.selectRow(randomNumber1, inComponent: 0, animated: true)
-        DadosMonstruo.selectRow(randomNumber2, inComponent: 1, animated: true)
-        DadosMonstruo.selectRow(randomNumber3, inComponent: 2, animated: true)
+        DadosMonstruo.selectRow(randomNumber1-1, inComponent: 0, animated: true)
+        DadosMonstruo.selectRow(randomNumber2-1, inComponent: 1, animated: true)
+        DadosMonstruo.selectRow(randomNumber3-1, inComponent: 2, animated: true)
         
         
-        DadosHeroe.selectRow(randomNumber4, inComponent: 0, animated: true)
-        DadosHeroe.selectRow(randomNumber5, inComponent: 1, animated: true)
-        DadosHeroe.selectRow(randomNumber6, inComponent: 2, animated: true)
+        DadosHeroe.selectRow(randomNumber4-1, inComponent: 0, animated: true)
+        DadosHeroe.selectRow(randomNumber5-1, inComponent: 1, animated: true)
+        DadosHeroe.selectRow(randomNumber6-1, inComponent: 2, animated: true)
         
-        
+        print("****************************************")
         print ("num1:" + String (randomNumber1))
         print ("num2:" + String (randomNumber2))
         print ("num3:" + String (randomNumber3))
+
+        print("               ")
         
         print ("num4:" + String (randomNumber4))
         print ("num5:" + String (randomNumber5))
         print ("num6:" + String (randomNumber6))
+   
         
         
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
@@ -214,13 +217,15 @@ class Batalla: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate,UIT
         
     }
     
-    func ataque(atakEnemigo : Int,atakHeroe : Int,heroe : Heroe, monstruo : Monstruo ){
+    
+    
+    func comprobarSumaDados(atakEnemigo : Int,atakHeroe : Int,heroe : Heroe, monstruo : Monstruo ){
         
-        if(atakEnemigo>atakHeroe){
+        if(atakEnemigo > atakHeroe){
             heroe.setVidas(valor: heroe.getVida()-1)
             
         }
-        if(atakHeroe>atakEnemigo){
+        if(atakHeroe > atakEnemigo){
             monstruo.setVida(valor: monstruo.getVidaMonstruo()-1)
             
         }
@@ -250,11 +255,15 @@ class Batalla: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate,UIT
             mostrarAlerta(title: "KILL HIM", message: "Felicidades Has Ganado la Batalla!!")
             
             heroeELegido.setMonedas(valor: heroeELegido.getMonedas() + monstruoElegirMonstruo.getPremioMonstruo())
-          
-          /*  let index = ViewController.listaMonstruos.index(NSObject.value(forKey:monstruoElegirMonstruo))
-            ViewController.listaMonstruos.remove(at: index)
+         
             
-            */
+            if  let index = listaMonstruos.index(of: monstruoElegirMonstruo){
+       
+            
+         //  let index = listaMonstruos.index(NSObject.value(forKey:monstruoElegirMonstruo))
+            listaMonstruos.remove(at: index)
+        }
+            
             buttonAttack.isHidden = true
         }
         

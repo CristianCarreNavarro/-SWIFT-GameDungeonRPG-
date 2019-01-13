@@ -28,6 +28,14 @@ class Tienda: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITex
         labelMoney.textAlignment = .left
         mensajeLabel.text = ""
         
+        if(tieneEseObjeto(heroe: heroeELegido, item: arrayItems[pickerView.selectedRow(inComponent: 0)])){
+            buttonBuy.isHidden =  true
+            print ("item SI tiene :",item.getAtaque())
+        }else{
+            buttonBuy.isHidden = false
+            print ("item NO tiene :",item.getAtaque())
+        }
+        
     }
     
     
@@ -43,8 +51,8 @@ class Tienda: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITex
         
         if(item === arma)||(item === botas)||(item === armadura)||(item === escudo)||(item === anillo)||(item === casco){
             loTiene = true
+            print("entro")
         }
-        
         return loTiene
     }
     
@@ -126,18 +134,34 @@ class Tienda: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITex
         return arrayItems.count;
     }
     
-    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: NSInteger, inComponent component: Int) {
+        item = arrayItems[row] as? Item
+        costeItem = item.getCoste()
+        
+        
+        if(tieneEseObjeto(heroe: heroeELegido, item: item)){
+            buttonBuy.isHidden =  true
+            print ("item SI tiene :",item.getAtaque())
+        }else{
+            buttonBuy.isHidden = false
+            print ("item NO tiene :",item.getAtaque())
+        }
+        
+    }
+
     
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 100
     }
     
+    
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
         let myView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         let myImageView = UIImageView(frame: CGRect(x: -95, y: 0, width: 100, height: 100))
-        item = arrayItems[row] as? Item
+        item = (arrayItems[row] as! Item)
+        print ("item SELECCIONADO :",item.getAtaque())
         myImageView.image = item.getImagen()
         myView.addSubview(myImageView)
         
@@ -181,23 +205,14 @@ class Tienda: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITex
         myView.addSubview(coste)
         
         
-        
-        if(tieneEseObjeto(heroe: heroeELegido, item: item)){
-            buttonBuy.isHidden =  true
-        }else{
-            buttonBuy.isHidden = false
-        }
+   
         
         
         return myView
     }
     
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: NSInteger, inComponent component: Int) {
-        item = arrayItems[row] as? Item
-        costeItem = item.getCoste()
-        
-    }
+   
     
     
 }
