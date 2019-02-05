@@ -277,11 +277,7 @@ func SaberAtaqueMonstruo(monstruo : Monstruo)-> Int {
         let randomNumber5 = Int(arc4random_uniform(UInt32(num)))
         let randomNumber6 = Int(arc4random_uniform(UInt32(num)))
         
-        ataqueEnemigo = randomNumber1+randomNumber2+randomNumber3
-        ataqueHeroe = randomNumber4+randomNumber5+randomNumber6
-        
-        golpeEnemigo.text = "   golpe: " + String (ataqueEnemigo)
-        golpeHeroe.text = "   golpe: " + String (ataqueHeroe)
+     
         
       /*
         for index in 0...numeroComponentesMonstruo {
@@ -291,14 +287,28 @@ func SaberAtaqueMonstruo(monstruo : Monstruo)-> Int {
             
         }*/
         if (numeroComponentesMonstruo==3){
-        DadosMonstruo.selectRow(randomNumber1-1, inComponent: 0, animated: true)
-        DadosMonstruo.selectRow(randomNumber2-1, inComponent: 1, animated: true)
-        DadosMonstruo.selectRow(randomNumber3-1, inComponent: 2, animated: true)
-        }else if(numeroComponentesHeroe==2){
-            DadosMonstruo.selectRow(randomNumber1-1, inComponent: 0, animated: true)
-            DadosMonstruo.selectRow(randomNumber2-1, inComponent: 1, animated: true)
+        DadosMonstruo.selectRow(randomNumber4-1, inComponent: 0, animated: true)
+        DadosMonstruo.selectRow(randomNumber5-1, inComponent: 1, animated: true)
+        DadosMonstruo.selectRow(randomNumber6-1, inComponent: 2, animated: true)
+            
+         ataqueEnemigo = randomNumber4+randomNumber5+randomNumber6
+            
+          
+        }else if(numeroComponentesMonstruo==2){
+            DadosMonstruo.selectRow(randomNumber4-1, inComponent: 0, animated: true)
+            DadosMonstruo.selectRow(randomNumber5-1, inComponent: 1, animated: true)
+            
+       
+            ataqueEnemigo = randomNumber4+randomNumber5
+            
+   
         }else{
-            DadosMonstruo.selectRow(randomNumber1-1, inComponent: 0, animated: true)
+            DadosMonstruo.selectRow(randomNumber4-1, inComponent: 0, animated: true)
+            
+          
+            ataqueEnemigo = randomNumber4
+            
+      
         }
          /*
         for index in 0...numeroComponentesHeroe {
@@ -312,15 +322,24 @@ func SaberAtaqueMonstruo(monstruo : Monstruo)-> Int {
             DadosHeroe.selectRow(randomNumber1-1, inComponent: 0, animated: true)
             DadosHeroe.selectRow(randomNumber2-1, inComponent: 1, animated: true)
             DadosHeroe.selectRow(randomNumber3-1, inComponent: 2, animated: true)
+            
+            ataqueHeroe = randomNumber1+randomNumber2+randomNumber3
+            
         }else if(numeroComponentesHeroe==2){
             DadosHeroe.selectRow(randomNumber1-1, inComponent: 0, animated: true)
             DadosHeroe.selectRow(randomNumber2-1, inComponent: 1, animated: true)
+            
+            ataqueHeroe = randomNumber1+randomNumber2
+            
         }else{
             DadosHeroe.selectRow(randomNumber1-1, inComponent: 0, animated: true)
+            
+            ataqueHeroe = randomNumber1
         }
         
        
-        
+        golpeEnemigo.text = "   golpe: " + String (ataqueEnemigo)
+        golpeHeroe.text = "   golpe: " + String (ataqueHeroe)
     }
     
     

@@ -168,6 +168,7 @@ var muertosMonstruos : Bool = false
         if(retornarHeroe()==false){
         crearHeroes()
         }
+        
         if(muertosMonstruos==false){
         iniciarMonstruos()
         }
